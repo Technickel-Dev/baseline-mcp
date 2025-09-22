@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.0.8",
+    "@modelcontextprotocol/sdk": "^1.18.1",
     "web-features": "^3.0.0"
   }
 }

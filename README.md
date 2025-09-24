@@ -1,32 +1,80 @@
 # MCP Server for Baseline Feature Suggestions
 
-This server provides tools and resources to suggest and query baseline web features. It is built using the `modelcontextprotocol-ts-sdk`.
+This server provides tools and resources to suggest and query baseline web features. It is built using the `@modelcontextprotocol/sdk`.
 
 ## Prerequisites
 
-- Node.js and npm installed on your system.
+- Docker installed on your system.
+- For local development, you will also need Node.js and npm.
 
-## Installation
+## Usage
 
-1. Clone the repository or download the files.
-2. Open a terminal and navigate to the `mcp_server` directory:
-   ```bash
-   cd mcp_server
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
+This is the recommended way to use the server, as it runs from a pre-built Docker image and requires no local installation.
 
-## Running the Server
+1.  **Pull the latest image from GitHub Container Registry:**
+    ```sh
+    docker pull ghcr.io/Technickel-Dev/baseline-mcp:latest
+    ```
 
-To start the server, run the following command:
+2.  **Configure your client:** Use the accordion sections below to configure your preferred client to connect to the tool.
 
-```bash
-npm start
-```
+<details>
+<summary>Connect with VS Code Copilot</summary>
 
-The server will start and listen for JSON-RPC messages on standard input.
+1.  Open your VS Code `settings.json` file or a project-specific `.vscode/mcp.json` file.
+2.  Add the following configuration. This tells Copilot how to launch and communicate with the server.
+
+    ```json
+    "mcp": {
+      "servers": {
+        "baseline-suggester": {
+          "command": "docker",
+          "args": ["run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
+        }
+      }
+    }
+    ```
+
+</details>
+
+<details>
+<summary>Connect with Gemini CLI & Gemini Code Assist</summary>
+
+Both the Gemini CLI and the Gemini Code Assist extension for VS Code share the same configuration.
+
+1.  Open your user settings file at `~/.gemini/settings.json` or a project-specific file at `.gemini/settings.json`.
+2.  Add the following object to the `mcpServers` array. If the array doesn't exist, create it.
+
+    ```json
+    {
+      "type": "stdio",
+      "name": "baseline-suggester",
+      "command": ["docker", "run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
+    }
+    ```
+
+</details>
+
+## Development
+
+If you want to modify or contribute to this tool, follow these instructions for a local setup.
+
+### Installation
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd baseline-mcp`
+
+### Running Locally
+
+1.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+2.  **Run the server:**
+    ```sh
+    npm start
+    ```
 
 ## Interacting with the Server
 
@@ -328,7 +376,7 @@ Returns web features supported by at least one major browser.
 
 #### `get_features_not_supported_by_any_browser`
 
-Returns web features not supported by any major browser. These features are likely experimental or obsolete.
+Returns web features not supported by any major browser. These are likely experimental or obsolete.
 
 **Example Request:**
 

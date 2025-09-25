@@ -9,49 +9,97 @@ This server provides tools and resources to suggest and query baseline web featu
 
 ## Usage
 
-This is the recommended way to use the server, as it runs from a pre-built Docker image and requires no local installation.
+This tool can be used in two ways: via `npx` for a quick, installation-free experience, or via `Docker` for a containerized environment.
 
-1.  **Pull the latest image from GitHub Container Registry:**
-    ```sh
-    docker pull ghcr.io/Technickel-Dev/baseline-mcp:latest
+### Method 1: Using NPX
+
+This method requires authenticating with GitHub Packages once.
+
+<details>
+<summary>Click for first-time authentication setup</summary>
+
+1.  Create a [Personal Access Token (PAT)](https://github.com/settings/tokens) with the `read:packages` scope.
+
+2.  Create or edit the `.npmrc` file in your user home directory (`~/.npmrc`) and add the following lines, replacing `YOUR_PERSONAL_ACCESS_TOKEN` with your token.
+
+    ```
+    @Technickel-Dev:registry=https://npm.pkg.github.com/
+    //npm.pkg.github.com/:_authToken=YOUR_PERSONAL_ACCESS_TOKEN
     ```
 
-2.  **Configure your client:** Use the accordion sections below to configure your preferred client to connect to the tool.
+</details>
+
+Once authenticated, you can run the server directly:
+
+```sh
+npx @Technickel-Dev/baseline-mcp
+```
+
+### Method 2: Using Docker
+
+This method uses a pre-built Docker image and requires no authentication.
+
+```sh
+docker run -i --rm ghcr.io/Technickel-Dev/baseline-mcp:latest
+```
+
+### Connecting a Client
+
+Use the accordion below to configure your client. Choose the command that matches your preferred method (`npx` or `Docker`).
 
 <details>
 <summary>Connect with VS Code Copilot</summary>
 
-1.  Open your VS Code `settings.json` file or a project-specific `.vscode/mcp.json` file.
-2.  Add the following configuration. This tells Copilot how to launch and communicate with the server.
+In your `settings.json` or `.vscode/mcp.json`, add the following configuration. 
 
-    ```json
-    "mcp": {
-      "servers": {
-        "baseline-suggester": {
-          "command": "docker",
-          "args": ["run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
-        }
-      }
+**For NPX:**
+```json
+"mcp": {
+  "servers": {
+    "baseline-suggester": {
+      "command": "npx",
+      "args": ["@Technickel-Dev/baseline-mcp"]
     }
-    ```
+  }
+}
+```
+
+**For Docker:**
+```json
+"mcp": {
+  "servers": {
+    "baseline-suggester": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
+    }
+  }
+}
+```
 
 </details>
 
 <details>
 <summary>Connect with Gemini CLI & Gemini Code Assist</summary>
 
-Both the Gemini CLI and the Gemini Code Assist extension for VS Code share the same configuration.
+In your `~/.gemini/settings.json`, add one of the following objects to the `mcpServers` array.
 
-1.  Open your user settings file at `~/.gemini/settings.json` or a project-specific file at `.gemini/settings.json`.
-2.  Add the following object to the `mcpServers` array. If the array doesn't exist, create it.
+**For NPX:**
+```json
+{
+  "type": "stdio",
+  "name": "baseline-suggester",
+  "command": ["npx", "@Technickel-Dev/baseline-mcp"]
+}
+```
 
-    ```json
-    {
-      "type": "stdio",
-      "name": "baseline-suggester",
-      "command": ["docker", "run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
-    }
-    ```
+**For Docker:**
+```json
+{
+  "type": "stdio",
+  "name": "baseline-suggester",
+  "command": ["docker", "run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
+}
+```
 
 </details>
 

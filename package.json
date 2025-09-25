@@ -1,8 +1,11 @@
 {
-  "name": "@Technickel-Dev/baseline-mcp",
+  "name": "@technickel-dev/baseline-mcp",
   "version": "1.0.0",
   "description": "MCP Server for baseline feature suggestions",
   "main": "server.js",
+  "bin": {
+    "baseline-mcp": "./bin/baseline-mcp"
+  },
   "scripts": {
     "start": "node server.js"
   },

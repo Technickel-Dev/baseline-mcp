@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+// This wrapper script ensures that server.js is executed correctly by Node.js.
+const path = require('path');
+const { spawn } = require('child_process');
+
+const serverPath = path.resolve(__dirname, '../server.js');
+
+// Spawn the server process, inheriting stdio for MCP communication.
+const serverProcess = spawn('node', [serverPath], {
+  stdio: 'inherit'
+});
+
+serverProcess.on('error', (err) => {
+  console.error('Failed to start MCP server:', err);
+  process.exit(1);
+});

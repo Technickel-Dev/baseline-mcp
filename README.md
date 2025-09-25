@@ -252,6 +252,36 @@ Gets all web features that reached "baseline low" status (newly supported) since
 {"jsonrpc":"2.0","method":"get_baseline_low_since","params":["2023-01-01"]}
 ```
 
+#### `get_baseline_low_last_30_days`
+
+Gets all web features that reached 'baseline low' status in the last 30 days.
+
+**Example Request:**
+
+```json
+{"jsonrpc":"2.0","method":"get_baseline_low_last_30_days"}
+```
+
+#### `get_baseline_high_last_30_days`
+
+Gets all web features that reached 'baseline high' status in the last 30 days.
+
+**Example Request:**
+
+```json
+{"jsonrpc":"2.0","method":"get_baseline_high_last_30_days"}
+```
+
+#### `get_baseline_status_changes_last_30_days`
+
+Lists all web features that have changed their baseline status in the last 30 days, showing the transition.
+
+**Example Request:**
+
+```json
+{"jsonrpc":"2.0","method":"get_baseline_status_changes_last_30_days"}
+```
+
 #### `get_feature_groups`
 
 Returns a list of all available feature groups. These groups categorize features by technology (e.g., "css", "javascript").

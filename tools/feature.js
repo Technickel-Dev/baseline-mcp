@@ -309,6 +309,84 @@ const getBaselineLowSinceTool = new Tool("get_baseline_low_since", {
   },
 });
 
+const getBaselineLowLast30DaysTool = new Tool("get_baseline_low_last_30_days", {
+    description: "Gets all web features that reached 'baseline low' status in the last 30 days.",
+    run: async () => {
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        const results = [];
+        for (const featureId in features) {
+            const feature = features[featureId];
+            if (feature.status.baseline === "low" && new Date(feature.status.baseline_low_date) >= thirtyDaysAgo) {
+                results.push({
+                    id: featureId,
+                    name: feature.name,
+                    baseline_low_date: feature.status.baseline_low_date,
+                });
+            }
+        }
+        return results;
+    }
+});
+
+const getBaselineHighLast30DaysTool = new Tool("get_baseline_high_last_30_days", {
+    description: "Gets all web features that reached 'baseline high' status in the last 30 days.",
+    run: async () => {
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        const results = [];
+        for (const featureId in features) {
+            const feature = features[featureId];
+            if (feature.status.baseline === "high" && new Date(feature.status.baseline_high_date) >= thirtyDaysAgo) {
+                results.push({
+                    id: featureId,
+                    name: feature.name,
+                    baseline_high_date: feature.status.baseline_high_date,
+                });
+            }
+        }
+        return results;
+    }
+});
+
+const getBaselineStatusChangesLast30DaysTool = new Tool("get_baseline_status_changes_last_30_days", {
+    description: "Lists all web features that have changed their baseline status in the last 30 days, showing the transition.",
+    run: async () => {
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        const results = [];
+
+        for (const featureId in features) {
+            const feature = features[featureId];
+
+            // Check for newly high status
+            if (feature.status.baseline === "high" && new Date(feature.status.baseline_high_date) >= thirtyDaysAgo) {
+                results.push({
+                    id: featureId,
+                    name: feature.name,
+                    transition: "Promoted to Widely Supported",
+                    new_status: "high",
+                    old_status: "low",
+                    change_date: feature.status.baseline_high_date,
+                });
+            }
+
+            // Check for newly low status
+            if (feature.status.baseline === "low" && new Date(feature.status.baseline_low_date) >= thirtyDaysAgo) {
+                results.push({
+                    id: featureId,
+                    name: feature.name,
+                    transition: "Newly Baseline",
+                    new_status: "low",
+                    old_status: false,
+                    change_date: feature.status.baseline_low_date,
+                });
+            }
+        }
+        return results.sort((a, b) => new Date(b.change_date) - new Date(a.change_date));
+    }
+});
+
 const getFeaturesByDescriptionKeywordTool = new Tool(
   "get_features_by_description_keyword",
   {
@@ -558,6 +636,9 @@ module.exports = {
   getFeaturesByCompatFeatureTool,
   getBaselineHighSinceTool,
   getBaselineLowSinceTool,
+  getBaselineLowLast30DaysTool,
+  getBaselineHighLast30DaysTool,
+  getBaselineStatusChangesLast30DaysTool,
   getFeaturesByDescriptionKeywordTool,
   getFeaturesByNameKeywordTool,
   getFeaturesWithMultipleSpecUrlsTool,

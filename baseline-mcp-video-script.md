@@ -1,8 +1,8 @@
 # Baseline MCP: The AI Wrangler
 
 **Video Length:** 3 minutes
-**Theme:** Retro-futuristic Cowboy, "AI Wrangler"
-**Speaker:** Technickel
+**Theme:** Retro-futuristic Cowboy
+**Speaker:** Technickel (Voiceover Only)
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Visuals:**
 > {
-> **Scene Description:** A highly detailed, photorealistic, 16:9 aspect ratio shot of a sprawling ranch at dawn. The lighting is cinematic and warm. Instead of wood, the corral fences are made of steady, glowing beams of light. A classic red barn stands in the background, its large door a vibrant, flickering screen displaying scrolling code. The morning mist is filled with softly glowing digital particles. TECHNICKEL, the AI Wrangler, leans against a light-fence post.
-> **Action:** Technickel pushes off the post, walks towards the camera with a confident stride, and tips his hat. The holographic brim flickers, displaying the text "AI Wrangler".
-> **Audio - Music:** A cinematic western guitar melody fused with a subtle, pulsing electronic beat, but with a more optimistic, morning feel.
+> **Scene Description:** A highly detailed, photorealistic, 16:9 aspect ratio sweeping shot across a sprawling ranch at dawn. The lighting is cinematic and warm. Instead of wood, the corral fences are made of steady, glowing beams of light. A classic red barn stands in the background, its large door a vibrant, flickering screen displaying scrolling code. The morning mist is filled with softly glowing digital particles.
+> **Action:** The camera glides over the light-fences and past the barn, finally settling on a view of the digital sunrise.
+> **Audio - Music:** A cinematic western guitar melody fused with a subtle, pulsing electronic beat, with an optimistic, morning feel.
 > **Audio - Soundscape:** The gentle sounds of a ranch waking up (distant robotic cattle lowing) mixed with a soft electronic hum.
 > }
 
@@ -34,7 +34,7 @@ Howdy. They call me Technickel. Out here on the digital ranch, things move fast.
 > **Audio - Soundscape:** The thunderous sound of a cattle stampede mixed with chaotic computer error noises.
 > }
 
-**Technickel (On-screen, leaning against a holographic fence):**
+**Technickel (Voiceover):**
 Baseline tells us which web features are ready for the big time. But corralling all that information? It's enough to tire out any developer. Which features are safe to build with? Which ones will work for all your users? Answering those questions can feel like trying to catch smoke.
 
 **Visuals:**
@@ -44,7 +44,7 @@ Baseline tells us which web features are ready for the big time. But corralling 
 > **Audio - Soundscape:** The chaotic noise abruptly stops, replaced by a satisfying "cha-ching" sound and the gentle hum of a well-oiled machine.
 > }
 
-**Technickel:**
+**Technickel (Voiceover):**
 That's where my project, the Baseline MCP server, comes in. It's built on the Model-Context Protocol—MCP for short.
 
 **(Visuals:** {
@@ -63,12 +63,12 @@ Now, what that protocol does is simple: it takes a general AI and gives it a spe
 
 **Visuals:**
 > {
-> **Scene Description:** An extreme close-up on Technickel's face in a 16:9 aspect ratio. The shot is photorealistic and highly detailed, showing the texture of his high-tech hat. The lighting is dramatic.
-> **Action:** He raises a hand and smirks, looking directly into the camera.
+> **Scene Description:** A vibrant, stylized animation in a 16:9 aspect ratio. A futuristic vinyl record, spinning on a turntable, is suddenly scratched by a robotic arm. The words "Hold Your Horses" flash on the screen in a bold, western-style font.
+> **Action:** The record scratch is sharp and emphatic.
 > **Audio - Music:** The music comes to a sudden, scratching halt, like a record scratch.
 > }
 
-**Technickel:**
+**Technickel (Voiceover):**
 Now, hold your horses. Before you think this is just some simple wrapper around the Baseline data, you should know... this ol' server's got a few tricks up its sleeve.
 
 ---
@@ -118,8 +118,8 @@ And with the **Text Lasso**, you can analyze your entire codebase, or even a bun
 
 **Visuals:**
 > {
-> **Scene Description:** A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel is back on the digital ranch from the intro, with cinematic sunset lighting. He's now riding a magnificent robotic horse made of chrome and glowing light pipes.
-> **Action:** He rides slowly towards a binary sunset. As he gets smaller, the sun dips below the horizon, and the entire screen quickly fades to black.
+> **Scene Description:** A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. A magnificent robotic horse, made of chrome and glowing light pipes, stands alone on the digital ranch at sunset. The lighting is cinematic.
+> **Action:** The robotic horse turns and gallops gracefully towards the binary sunset. As it gets smaller, the sun dips below the horizon, and the entire screen quickly fades to black.
 > **Audio - Music:** The main theme swells to a heroic, optimistic crescendo, then fades out with the screen.
 > }
 

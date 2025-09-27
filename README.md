@@ -521,3 +521,13 @@ Returns web features that have an HTML-formatted description.
 ```json
 {"jsonrpc":"2.0","method":"get_features_with_html_description"}
 ```
+
+#### `get_min_browser_support_for_file`
+
+Analyzes file content to determine the minimum browser version required to support all detected web features.
+
+**Example Request:**
+
+```json
+{"jsonrpc":"2.0","method":"get_min_browser_support_for_file","params":["<html>...</html>"]}
+```

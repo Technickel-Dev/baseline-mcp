@@ -626,6 +626,33 @@ const getGroupDescriptionTool = new Tool("get_group_description", {
   },
 });
 
+const getMinBrowserSupportForFileTool = new Tool("get_min_browser_support_for_file", {
+    description: "Analyzes file content to determine the minimum browser version required to support all detected web features.",
+    run: async (fileContent, fileType = null) => {
+        const detectedFeatures = findFeaturesInContent(fileContent, fileType);
+        if (detectedFeatures.length === 0) {
+            return "No web features detected in the file.";
+        }
+
+        const minVersions = {};
+
+        for (const featureId of detectedFeatures) {
+            const feature = features[featureId];
+            if (!feature || !feature.status || !feature.status.support) continue;
+
+            for (const browser in feature.status.support) {
+                const requiredVersion = parseFloat(feature.status.support[browser]);
+                if (isNaN(requiredVersion)) continue;
+
+                if (!minVersions[browser] || requiredVersion > parseFloat(minVersions[browser] || "0")) {
+                    minVersions[browser] = feature.status.support[browser];
+                }
+            }
+        }
+        return minVersions;
+    }
+});
+
 module.exports = {
   featureSuggestionTool,
   getFeatureDetailsTool,
@@ -639,6 +666,7 @@ module.exports = {
   getBaselineLowLast30DaysTool,
   getBaselineHighLast30DaysTool,
   getBaselineStatusChangesLast30DaysTool,
+  getMinBrowserSupportForFileTool,
   getFeaturesByDescriptionKeywordTool,
   getFeaturesByNameKeywordTool,
   getFeaturesWithMultipleSpecUrlsTool,

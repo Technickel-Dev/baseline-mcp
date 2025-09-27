@@ -29,8 +29,8 @@ Howdy. They call me Technickel. Out here on the digital ranch, things move fast.
 
 **Visuals:**
 > {
-> **Scene Description:** A photorealistic and cinematic shot of a developer at a desk in a dimly lit room, looking stressed. The aspect ratio is 16:9. The screen, filled with browser compatibility tables, glows brightly. Suddenly, the tables burst from the screen in a vibrant, chaotic explosion, transforming into a highly detailed stampede of wild, robotic longhorns, each branded with a different CSS or JS feature name.
-> **Action:** The developer throws their hands up in frustration. The camera zooms in on their face, showing the "decision fatigue."
+> **Scene Description:** A photorealistic and cinematic shot of a developer at a desk in a dimly lit room. The developer wears a black hoodie and a simple black mask that covers their entire face. The front of the mask is a vibrant LED display, similar to a BoyWithUke mask. The aspect ratio is 16:9. The screen, filled with browser compatibility tables, glows brightly.
+> **Action:** The LED mask displays a simple, neutral expression (e.g., '•_•'). Suddenly, the tables burst from the screen in a chaotic explosion, transforming into a highly detailed stampede of wild, robotic longhorns. The developer throws their hands up, and the camera zooms in on their mask as the LED expression changes to one of frustration and stress (e.g., '>_<', or frantic, glitching lines).
 > **Audio - Soundscape:** The thunderous sound of a cattle stampede mixed with chaotic computer error noises.
 > }
 
@@ -40,7 +40,7 @@ Baseline tells us which web features are ready for the big time. But corralling 
 **Visuals:**
 > {
 > **Scene Description:** A clean, futuristic command-line interface materializes in a 16:9 aspect ratio, stable shot. The text is crisp and vibrant. A single command is typed: `mcp get-status`. The background shows the blurred, chaotic stampede from the previous shot.
-> **Action:** The stampeding longhorns instantly freeze and arrange themselves into a single, orderly line. A simple, clear status report appears on the screen, with green checkmarks next to "Baseline Approved" features. The developer from before now looks relieved and confident.
+> **Action:** The stampeding longhorns instantly freeze and arrange themselves into a single, orderly line. A simple, clear status report appears on the screen. The developer from before now looks relieved, their LED mask changing to a happy, satisfied expression (e.g., '^_^' or a simple smiling curve).
 > **Audio - Soundscape:** The chaotic noise abruptly stops, replaced by a satisfying "cha-ching" sound and the gentle hum of a well-oiled machine.
 > }
 

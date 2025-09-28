@@ -1,4 +1,4 @@
-const stopWords = new Set([
+const stopWords: Set<string> = new Set([
   "a",
   "an",
   "and",
@@ -34,23 +34,23 @@ const stopWords = new Set([
   "with",
 ]);
 
-function tokenize(text) {
+export const tokenize = (text: string): string[] => {
   return text
     .toLowerCase()
     .replace(/[.,\/#!$%^&*;:{}=\-_`~()]/g, "") // Remove punctuation
     .split(/\s+/)
     .filter((word) => word.length > 0 && !stopWords.has(word));
-}
+};
 
-function getTermFrequencies(tokens) {
-  const tf = {};
+export const getTermFrequencies = (tokens: string[]): { [key: string]: number } => {
+  const termFrequency: { [key: string]: number } = {};
   for (const token of tokens) {
-    tf[token] = (tf[token] || 0) + 1;
+    termFrequency[token] = (termFrequency[token] || 0) + 1;
   }
-  return tf;
-}
+  return termFrequency;
+};
 
-function dotProduct(vec1, vec2) {
+export const dotProduct = (vec1: { [key: string]: number }, vec2: { [key: string]: number }): number => {
   let product = 0;
   for (const key in vec1) {
     if (vec2[key]) {
@@ -58,25 +58,19 @@ function dotProduct(vec1, vec2) {
     }
   }
   return product;
-}
+};
 
-function magnitude(vec) {
+export const magnitude = (vec: { [key: string]: number }): number => {
   let sum = 0;
   for (const key in vec) {
     sum += vec[key] * vec[key];
   }
   return Math.sqrt(sum);
-}
+};
 
-function cosineSimilarity(vec1, vec2) {
+export const cosineSimilarity = (vec1: { [key: string]: number }, vec2: { [key: string]: number }): number => {
   const num = dotProduct(vec1, vec2);
   const den = magnitude(vec1) * magnitude(vec2);
   if (den === 0) return 0;
   return num / den;
-}
-
-export default {
-  tokenize,
-  getTermFrequencies,
-  cosineSimilarity,
 };

@@ -1,4 +1,8 @@
-import { McpServer, StdioTransport } from "@modelcontextprotocol/sdk";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import {
+  McpServer,
+  ResourceTemplate,
+} from "@modelcontextprotocol/sdk/server/mcp.js";
 import {
   featureSuggestionTool,
   getFeatureDetailsTool,
@@ -42,57 +46,61 @@ import {
 import {
   getFeaturesInSnapshotTool,
   getSnapshotDescriptionTool,
-} from "./tools/utility.js";
-import { baselineFeaturesList, discouragedFeaturesResource } from "./resources/features.js";
+} from "./tools/snapshot.js";
+import {
+  baselineFeaturesList,
+  discouragedFeaturesResource,
+} from "./resources/features.js";
 import { snapshotsResource } from "./resources/snapshots.js";
 import { latestBrowserVersionsResource } from "./resources/browsers.js";
 import { featureGroupsResource } from "./resources/groups.js";
 
 // --- Server Setup ---
 
-const server = new McpServer("baseline-feature-suggester", {
-  description: "A server for querying baseline web features data.",
+const server = new McpServer("baseline-mcp", {
+  description:
+    "A server for using Baseline data to provide context for web features.",
   tools: [
     featureSuggestionTool,
-    checkFeatureSupportTool,
-    getFeatureDetailsTool,
-    getFeaturesByStatusTool,
-    getFeaturesByGroupTool,
-    getFeaturesByCaniuseIdTool,
-    getFeaturesWithSpecUrlTool,
-    getFeaturesByCompatFeatureTool,
-    getBaselineHighSinceTool,
-    getBaselineLowSinceTool,
-    getBaselineLowLast30DaysTool,
-    getBaselineHighLast30DaysTool,
-    getBaselineStatusChangesLast30DaysTool,
-    getMinBrowserSupportForFileTool,
-    getUnsupportedFeaturesTool,
-    getRecentlySupportedFeaturesTool,
-    compareFeatureSupportTool,
-    getBrowserReleaseDatesTool,
-    getFeaturesInSnapshotTool,
-    getBrowserReleaseDateTool,
-    getFeaturesByDescriptionKeywordTool,
-    getFeaturesByNameKeywordTool,
-    getFeaturesWithMultipleSpecUrlsTool,
-    getFeaturesWithNoSpecUrlTool,
-    getFeaturesWithCaniuseMappingTool,
-    getFeaturesWithCompatFeaturesMappingTool,
-    getFeaturesSupportedByAllBrowsersTool,
-    getFeaturesSupportedByAnyBrowserTool,
-    getFeaturesNotSupportedByAnyBrowserTool,
-    getGroupDescriptionTool,
-    getSnapshotDescriptionTool,
-    getFeaturesWithAlternativesTool,
-    getFeatureAlternativeTool,
-    getRandomFeatureTool,
-    getFeaturesWithHtmlDescriptionTool,
-    listFeaturesInFileTool,
-    getMigrationPathForDiscouragedFeatureTool,
-    generateBrowserSupportMatrixTool,
+    // checkFeatureSupportTool,
+    // getFeatureDetailsTool,
+    // getFeaturesByStatusTool,
+    // getFeaturesByGroupTool,
+    // getFeaturesByCaniuseIdTool,
+    // getFeaturesWithSpecUrlTool,
+    // getFeaturesByCompatFeatureTool,
+    // getBaselineHighSinceTool,
+    // getBaselineLowSinceTool,
+    // getBaselineLowLast30DaysTool,
+    // getBaselineHighLast30DaysTool,
+    // getBaselineStatusChangesLast30DaysTool,
+    // getMinBrowserSupportForFileTool,
+    // getUnsupportedFeaturesTool,
+    // getRecentlySupportedFeaturesTool,
+    // compareFeatureSupportTool,
+    // getBrowserReleaseDatesTool,
+    // getFeaturesInSnapshotTool,
+    // getBrowserReleaseDateTool,
+    // getFeaturesByDescriptionKeywordTool,
+    // getFeaturesByNameKeywordTool,
+    // getFeaturesWithMultipleSpecUrlsTool,
+    // getFeaturesWithNoSpecUrlTool,
+    // getFeaturesWithCaniuseMappingTool,
+    // getFeaturesWithCompatFeaturesMappingTool,
+    // getFeaturesSupportedByAllBrowsersTool,
+    // getFeaturesSupportedByAnyBrowserTool,
+    // getFeaturesNotSupportedByAnyBrowserTool,
+    // getGroupDescriptionTool,
+    // getSnapshotDescriptionTool,
+    // getFeaturesWithAlternativesTool,
+    // getFeatureAlternativeTool,
+    // getRandomFeatureTool,
+    // getFeaturesWithHtmlDescriptionTool,
+    // listFeaturesInFileTool,
+    // getMigrationPathForDiscouragedFeatureTool,
+    // generateBrowserSupportMatrixTool,
   ],
-  resources: [baselineFeaturesList, snapshotsResource, latestBrowserVersionsResource, featureGroupsResource, discouragedFeaturesResource],
+  // resources: [baselineFeaturesList, snapshotsResource, latestBrowserVersionsResource, featureGroupsResource, discouragedFeaturesResource],
 });
 
-server.runWith(new StdioTransport());
+server.runWith(new StdioServerTransport());

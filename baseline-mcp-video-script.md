@@ -20,7 +20,7 @@
 > }
 
 **Technickel (Voiceover, calm and confident):**
-Howdy. They call me Technickel. Out here on the digital ranch, things move fast. New territories open up every day. But this ain't no lawless land. There's a new sheriff in town, bringin' order to the chaos of the web. Its name is Baseline.
+Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things move fast. New trails are blazed every day. But this ain't no lawless land. There's a new sheriff in town, bringin' order to the chaos of the web. Its name is Baseline.
 
 ---
 
@@ -37,7 +37,7 @@ Howdy. They call me Technickel. Out here on the digital ranch, things move fast.
 > }
 
 **Technickel (Voiceover):**
-Baseline tells us which web features are ready for the big time. But corralling all that information? It's enough to tire out any developer. Which features are safe to build with? Which ones will work for all your users? Answering those questions can feel like trying to catch smoke.
+Baseline tells us which web features are ready for the big time. But corralling all that information? It's enough to tire out any developer. Which features are safe to build with? Which ones will work for all your users? Answering those questions is like trying to nail a tumbleweed to a post.
 
 **Visuals:**
 > {

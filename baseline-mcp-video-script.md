@@ -132,14 +132,14 @@ And with the **Text Lasso**, you can analyze your entire codebase, or even a bun
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his LED mask showing a content smile '^_^') is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
+> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his LED mask showing a content smile ('^_^')) is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
 > **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, an AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent robotic horse.",
 > **Action:** "He rides slowly towards a binary sunset. As he gets smaller, he turns back slightly, and his LED mask gives a final, friendly smiling expression ('^_^') before he faces forward again. The sun dips below the horizon, and the entire screen quickly fades to black.",
 > **Audio - Music:** "The main theme swells to a heroic, optimistic crescendo, then fades out with the screen."
 > }
 
 **Technickel (Voiceover):**
-In the end, it's about building better, faster, and with more confidence. It's about taming the complexity of the modern web. Baseline MCP isn't just a tool; it's a new way to ride. It delivers the innovation and usefulness that every developer is looking for.
+In the end, it's about building better, faster, and with more confidence. We all know AI agents are the next frontier in developer tooling, but an agent without the right context is like a rider without a horse. Equipping them for the job is paramount. Baseline MCP isn't just another tool; it's the saddle and spurs for this new breed of AI. This is how we blaze the trail forward, delivering the innovation and usefulness every developer is looking for.
 
 **Final Screen:**
 > {

@@ -61,7 +61,7 @@ Now, having the Baseline data is like having a good map of the territory. That's
 > })
 
 **Technickel (Voiceover):**
-My server uses the Model-Context Protocol - MCP for short. The protocol turns that static map into a live expert you can talk to. It gives the AI a set of tools—not just to read the data, but to actively *work* with it. To query it, to compare it, to analyze it for you.
+My server uses the Model-Context Protocol—MCP for short. The protocol turns that static map into a live expert you can talk to. It gives the AI a set of tools—not just to read the data, but to actively *work* with it. To query it, to compare it, to analyze it for you.
 
 So instead of just looking at the map, you're asking your guide, "What's the quickest route?" or "Is it safe to cross that river?" You get answers, not just data points.
 
@@ -82,7 +82,7 @@ This is what connects you to the *meaning* in the Baseline context, giving you t
 > }
 
 **Technickel (Voiceover):**
-Now, hold your horses. Before you think this is just some simple wrapper around the Baseline data, you should know... this ol' server's got a few tricks up its sleeve.
+Now, hold your horses. It's easy to think you've seen this show before; another so-called Baseline MCP. But most of the herd are just simple data wrappers. This ol' server is a different breed entirely, and it's got a few tricks up its sleeve.
 
 ---
 

@@ -50,16 +50,22 @@ Now, Baseline is the sheriff 'round these parts that settles those arguments, gi
 > }
 
 **Technickel (Voiceover):**
-That's where my project, the Baseline MCP server, comes in. It's built on the Model-Context Protocol—MCP for short.
+That's where my project, the Baseline MCP server, comes in.
+
+Now, having the Baseline data is like having a good map of the territory. That's useful, for sure. But a map is just paper. It can't answer your questions.
 
 **(Visuals:** {
-> **Storyboard Prompt:** "A photorealistic, cinematic still photo of a complex 3D animation in a 16:9 aspect ratio. A photorealistic, glowing glass brain is the central focus, suspended in a clean, white space. Two colorful streams of data, one labeled 'Baseline Context' and the other 'Wrangler Tools,' are seen flowing into the brain. A holographic cowboy hat is materializing perfectly on top of the brain. The mood is transformative and intelligent.",
-> **Scene Description:** "A photorealistic CGI animated sequence in a 16:9 aspect ratio. A complex, glowing glass brain floats in a clean, white space. A glowing data stream labeled 'Baseline Context' and a detailed toolbox icon labeled 'Wrangler Tools' fly into the brain with energetic motion lines.",
-> **Action:** "The brain lights up with a brilliant pulse of light, and a holographic cowboy hat materializes on top with a flourish."
+> **Storyboard Prompt:** "A photorealistic, cinematic still photo of a complex 3D animation in a 16:9 aspect ratio. A photorealistic, glowing glass brain is the central focus, suspended in a clean, white space. Tool icons (a magnifying glass, a scale, a lasso) made of glowing light are seen flying into the brain. The mood is transformative and intelligent.",
+> **Scene Description:** "A photorealistic CGI animated sequence in a 16:9 aspect ratio. A complex, glowing glass brain floats in a clean, white space. Tool icons representing 'query,' 'compare,' and 'analyze' (like a magnifying glass, a scale, and a lasso) fly into the brain with energetic motion lines.",
+> **Action:** "As each tool icon is absorbed, the brain glows more intensely, signifying its new capabilities."
 > })
 
 **Technickel (Voiceover):**
-Now, what that protocol does is simple: it takes a general AI and gives it a specific job and the right tools for it. My server focuses the AI on one thing: knowing the Baseline feature set inside and out. And it gives it a whole toolkit for prospecting that data. It’s what turns a simple chatbot into a dedicated expert, an AI Wrangler. *That's* your faithful steed for the wild west of web development. It connects you directly to the Baseline context, giving you the straight-up truth on what's safe to use, cutting through the noise, and ending decision fatigue for good.
+My server uses the Model-Context Protocol - MCP for short. The protocol turns that static map into a live expert you can talk to. It gives the AI a set of tools—not just to read the data, but to actively *work* with it. To query it, to compare it, to analyze it for you.
+
+So instead of just looking at the map, you're asking your guide, "What's the quickest route?" or "Is it safe to cross that river?" You get answers, not just data points.
+
+This is what connects you to the *meaning* in the Baseline context, giving you the straight-up truth to cut through the noise and end decision fatigue for good.
 
 ---
 

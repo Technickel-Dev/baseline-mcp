@@ -13,14 +13,14 @@
 **Visuals:**
 > {
 > **Storyboard Prompt:** "A single, ultra-detailed, photorealistic cinematic still photo in a 16:9 aspect ratio. The image captures a wide, cinematic panorama of a futuristic ranch at dawn. In the foreground, a cowboy figure (Technickel) leans against a fence made of glowing light beams. He's dressed in classic western attire, but his face is a black mask with a simple, friendly emoji LED smile ('^_^'). The mood is peaceful, optimistic, and high-tech.",
-> **Scene Description:** "A highly detailed, photorealistic, 16:9 aspect ratio sweeping shot across a sprawling ranch at dawn. The lighting is cinematic and warm. In the foreground, TECHNICKEL, the AI Wrangler, leans against a light-fence post. He's dressed in classic cowboy attire (duster coat, boots, cowboy hat). His face is completely obscured by a black mask with a vibrant, friendly emoji LED smile ('^_^').",
+> **Scene Description:** "A highly detailed, photorealistic, 16:9 aspect ratio sweeping shot across a sprawling ranch at dawn. The lighting is cinematic and warm. In the foreground, TECHNICKEL, an AI Wrangler, leans against a light-fence post. He's dressed in classic cowboy attire (duster coat, boots, cowboy hat). His face is completely obscured by a black mask with a vibrant, friendly emoji LED smile ('^_^').",
 > **Action:** "Technickel pushes off the post, walks towards the camera with a confident stride. His LED mask gives a subtle, friendly blink. He tips his hat.",
 > **Audio - Music:** "A cinematic western guitar melody fused with a subtle, pulsing electronic beat, with an optimistic, morning feel.",
 > **Audio - Soundscape:** "The gentle sounds of a ranch waking up (distant robotic cattle lowing) mixed with a soft electronic hum."
 > }
 
 **Technickel (Voiceover, calm and confident):**
-Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things move fast. New trails are blazed every day. But this ain't no lawless land. There's a new sheriff in town, bringin' order to the chaos of the web. Its name is Baseline.
+Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things move fast. New trails are blazed every day. But this ain't a lawless land. Thankfully, a set of rules is bringing order to the chaos. They call it Baseline.
 
 ---
 
@@ -37,7 +37,9 @@ Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things mov
 > }
 
 **Technickel (Voiceover):**
-Baseline tells us which web features are ready for the big time. But corralling all that information? It's enough to tire out any developer. Which features are safe to build with? Which ones will work for all your users? Answering those questions is like trying to nail a tumbleweed to a post.
+For ages, developers have been stuck in a browser compatibility showdown. "Which features are safe to build with? Which ones will work for all your users?" Answering those questions has been like trying to nail a tumbleweed to a post.
+
+Now, Baseline is the sheriff 'round these parts that settles those arguments, giving us a clear signal on what's good to go. But a developer's work is never done. Who has the time to constantly check that data?
 
 **Visuals:**
 > {
@@ -125,7 +127,7 @@ And with the **Text Lasso**, you can analyze your entire codebase, or even a bun
 **Visuals:**
 > {
 > **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his LED mask showing a content smile '^_^') is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
-> **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, the AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent robotic horse.",
+> **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, an AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent robotic horse.",
 > **Action:** "He rides slowly towards a binary sunset. As he gets smaller, he turns back slightly, and his LED mask gives a final, friendly smiling expression ('^_^') before he faces forward again. The sun dips below the horizon, and the entire screen quickly fades to black.",
 > **Audio - Music:** "The main theme swells to a heroic, optimistic crescendo, then fades out with the screen."
 > }

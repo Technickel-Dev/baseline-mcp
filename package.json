@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "inspect": "tsc &&npx @modelcontextprotocol/inspector node ./dist/server.js"
+    "inspect": "tsc && npx @modelcontextprotocol/inspector node ./dist/server.js"
   },
   "repository": {
     "type": "git",

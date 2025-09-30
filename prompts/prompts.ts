@@ -21,7 +21,7 @@ export const registerPrompts = (server: McpServer) => {
   );
 };
 
-export const studyGuidePrompt = `Create a visually appealing markdown study guide for the newest and most recently stable web features.
+export const studyGuidePrompt = `Create a visually appealing markdown study guide in the current directory for the newest and most recently stable web features.
 
 **Date:** ${new Date().toDateString()}
 

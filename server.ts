@@ -4,6 +4,7 @@ import { registerFeatureTools } from "./tools/feature.js";
 import { registerBrowserTools } from "./tools/browser.js";
 import { registerGroupTools } from "./tools/groups.js";
 import { registerSnapshotTools } from "./tools/snapshot.js";
+import { registerPrompts } from "./prompts/prompts.js";
 
 const server: McpServer = new McpServer({
   name: "baseline-mcp",
@@ -15,6 +16,7 @@ registerFeatureTools(server);
 registerBrowserTools(server);
 registerGroupTools(server);
 registerSnapshotTools(server);
+registerPrompts(server);
 
 const transport = new StdioServerTransport();
 await server.connect(transport);

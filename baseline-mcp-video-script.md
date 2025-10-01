@@ -93,16 +93,16 @@ Now, hold your horses. It's easy to think you've seen this show before; another 
 **Technickel (Voiceover):**
 The MCP server comes equipped with a unique set of tools for some real sharpshootin'.
 
-**Visuals - Example 1: The Feature Scout**
+**Visuals - Example 1: The Study Guide**
 > {
-> **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio with dramatic lighting. Two photorealistic, detailed robotic cowboys are frozen in a classic western standoff. One robot, labeled 'Browser A,' has a green checkmark glowing on its chest. The other, 'Browser B,' has a red X. They are on a dusty digital plain under a binary sunset. The mood is competitive and high-tech.",
+> **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio with dramatic lighting. A robotic hand is writing on a futuristic, glowing tablet. The tablet displays a beautifully formatted study guide with charts and code examples. The mood is educational and high-tech.",
 > **Scene Description:** "A crisp, high-resolution screen recording of a terminal in a 16:9 aspect ratio. The text is perfectly clear and has a modern, slightly glowing font.",
-> **Action:** "The command `mcp feature --details \"CSS Nesting\" --compare \"Chrome,Safari\"` is run. The terminal outputs a slick, color-coded report showing exactly when CSS Nesting landed in each browser and its current Baseline status.",
-> **Audio - Soundscape:** "A futuristic 'scanner' sound effect."
+> **Action:** "The command `mcp create-study-guide` is run. The terminal shows a progress bar, and then a message 'Study guide created at study-guide.md'. A file explorer window opens, showing the newly created file.",
+> **Audio - Soundscape:** "A futuristic 'writing' sound effect."
 > }
 
 **Technickel (Voiceover):**
-With the **Feature Scout**, you can get more than just a "yes" or "no." You can pull detailed histories and side-by-side comparisons for any feature across browsers.
+The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones—the brand new and the newly stable—so you can stay on the cutting edge without risking a broken user experience. It's a practical demonstration of how you can use Baseline's data to make informed decisions and accelerate your learning, cutting through the noise so you can focus on building with confidence.
 
 **Visuals - Example 2: The Browser Showdown**
 > {

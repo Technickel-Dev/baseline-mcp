@@ -66,11 +66,11 @@ export const registerPrompts = (server: McpServer) => {
   );
 
   server.registerPrompt(
-    "min-browser-support-table",
+    "min-browser-support-report",
     {
-      title: "Minimum Browser Support Table",
+      title: "Minimum Browser Support Report",
       description:
-        "Get the minimum browser support for features in a set of files and display it as a table.",
+        "Get the minimum browser support for features in a set of files and display it as a report.",
       argsSchema: {
         filePath: z
           .string()
@@ -83,7 +83,7 @@ export const registerPrompts = (server: McpServer) => {
           role: "assistant",
           content: {
             type: "text",
-            text: minBrowserSupportTablePrompt(filePath),
+            text: minBrowserSupportReportPrompt(filePath),
           },
         },
       ],
@@ -112,5 +112,5 @@ export const findFeaturesInFilePrompt = (filePath: string) =>
 export const suggestBaselineFeaturePrompt = (goal: string) =>
   `Suggest one or more baseline features for the following goal: "${goal}"`;
 
-export const minBrowserSupportTablePrompt = (filePath: string) =>
+export const minBrowserSupportReportPrompt = (filePath: string) =>
   `Get the minimum browser support for the features of the file or files in the directory "${filePath}". Output the results as an easy to read read report with reasoning and a minumum support table in a markdown file`;

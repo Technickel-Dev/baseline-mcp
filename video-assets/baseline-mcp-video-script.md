@@ -12,9 +12,9 @@
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A single, ultra-detailed, photorealistic cinematic still photo in a 16:9 aspect ratio. The image captures a wide, cinematic panorama of a futuristic ranch at dawn. In the foreground, a cowboy figure (Technickel) leans against a fence made of glowing light beams. He's dressed in classic western attire, but his face is a black mask with a simple, friendly emoji LED smile ('^_^'). The mood is peaceful, optimistic, and high-tech.",
-> **Scene Description:** "A highly detailed, photorealistic, 16:9 aspect ratio sweeping shot across a sprawling ranch at dawn. The lighting is cinematic and warm. In the foreground, TECHNICKEL, an AI Wrangler, leans against a light-fence post. He's dressed in classic cowboy attire (duster coat, boots, cowboy hat). His face is completely obscured by a black mask with a vibrant, friendly emoji LED smile ('^_^').",
-> **Action:** "Technickel pushes off the post, walks towards the camera with a confident stride. His LED mask gives a subtle, friendly blink. He tips his hat.",
+> **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio. The image captures a futuristic ranch at sunset. In the foreground, a cowboy figure (Technickel) with a sunglasses emoji for a face stands confidently with hands on hips. He is in front of a glowing, high-tech fence. Behind the fence, a herd of holographic, wireframe cattle graze in a field. The mood is a cool, confident blend of classic western and high-tech.",
+> **Scene Description:** "A highly detailed, photorealistic, 16:9 aspect ratio shot of a futuristic ranch at sunset. The lighting is cinematic and warm. In the foreground, TECHNICKEL, an AI Wrangler, stands with hands on hips, exuding confidence. He's dressed in classic cowboy attire (hat, vest, red bandana), but his face is a sunglasses emoji. He is in front of a fence made of glowing light beams. In the background, a herd of holographic, wireframe cattle graze peacefully.",
+> **Action:** "Technickel gives a wave. The holographic cattle in the background flicker slightly.",
 > **Audio - Music:** "A cinematic western guitar melody fused with a subtle, pulsing electronic beat, with an optimistic, morning feel.",
 > **Audio - Soundscape:** "The gentle sounds of a ranch waking up (distant robotic cattle lowing) mixed with a soft electronic hum."
 > }

@@ -42,6 +42,53 @@ export const registerPrompts = (server: McpServer) => {
       ],
     })
   );
+
+  server.registerPrompt(
+    "suggest-baseline-features",
+    {
+      title: "Suggest Baseline Features",
+      description: "Suggests baseline features based on a description of a goal.",
+      argsSchema: {
+        goal: z.string().describe("The description of the goal."),
+      },
+    },
+    ({ goal }) => ({
+      messages: [
+        {
+          role: "assistant",
+          content: {
+            type: "text",
+            text: suggestBaselineFeaturePrompt(goal),
+          },
+        },
+      ],
+    })
+  );
+
+  server.registerPrompt(
+    "min-browser-support-table",
+    {
+      title: "Minimum Browser Support Table",
+      description:
+        "Get the minimum browser support for features in a set of files and display it as a table.",
+      argsSchema: {
+        filePath: z
+          .string()
+          .describe("The path to the file or directory to analyze."),
+      },
+    },
+    ({ filePath }) => ({
+      messages: [
+        {
+          role: "assistant",
+          content: {
+            type: "text",
+            text: minBrowserSupportTablePrompt(filePath),
+          },
+        },
+      ],
+    })
+  );
 };
 
 export const studyGuidePrompt = `Create a visually appealing markdown study guide in the current directory for the newest and most recently stable web features.
@@ -61,3 +108,9 @@ Please format the study guide in a way that is easy to read and visually appeali
 
 export const findFeaturesInFilePrompt = (filePath: string) =>
   `Read the file at the path "${filePath}" and find the baseline features in it.`;
+
+export const suggestBaselineFeaturePrompt = (goal: string) =>
+  `Suggest one or more baseline features for the following goal: "${goal}"`;
+
+export const minBrowserSupportTablePrompt = (filePath: string) =>
+  `Get the minimum browser support for the features of the file or files in the directory "${filePath}". Output the results as an easy to read read report with reasoning and a minumum support table in a markdown file`;;

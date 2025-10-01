@@ -75,9 +75,9 @@ This is what connects you to the *meaning* in the Baseline context, giving you t
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A single, photorealistic, cinematic still photo in a 16:9 aspect ratio. An extreme close-up on a cowboy hat and the emoji face underneath it. The emoji is a simple, friendly smile (😊). One hand, wearing a leather glove, is raised in a 'stop' gesture in front of the face. The lighting is dramatic. The mood is commanding and direct.",
-> **Scene Description:** "An extreme close-up on Technickel's emoji face in a 16:9 aspect ratio. The shot is photorealistic and highly detailed. His face is a simple friendly smiling emoji (😊).",
-> **Action:** "He raises a leather-gloved hand in a 'stop' gesture. The smiling emoji on his face changes to a neutral emoji (😐) as if focusing. He looks directly into the camera.",
+> **Storyboard Prompt:** "A single, photorealistic, cinematic still photo in a 16:9 aspect ratio. A gloved hand dramatically stops a futuristic, holographic record player that's spinning an old-timey vinyl record. The lighting is dramatic. The mood is commanding and direct.",
+> **Scene Description:** "An extreme close-up on a futuristic, holographic record player in a 16:9 aspect ratio. The shot is photorealistic and highly detailed. An old-timey vinyl record is spinning on it.",
+> **Action:** "A leather-gloved hand enters the frame and dramatically stops the record, causing the music to scratch to a halt. The holographic elements of the record player flicker and die down.",
 > **Audio - Music:** "The music comes to a sudden, scratching halt, like a record scratch."
 > }
 

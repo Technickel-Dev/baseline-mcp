@@ -20,7 +20,7 @@
 > }
 
 **Technickel (Voiceover, calm and confident):**
-Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things move fast. New trails are blazed every day. But this ain't a lawless land. Thankfully, a set of rules is bringing order to the chaos. They call it Baseline.
+Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, new trails are blazed every day. But this ain't a lawless land. Thankfully, a set of rules is bringing order. They call it Baseline.
 
 ---
 
@@ -39,7 +39,7 @@ Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, things mov
 **Technickel (Voiceover):**
 For ages, developers have been stuck in a browser compatibility showdown. "Which features are safe to build with? Which ones will work for all your users?" Answering those questions has been like trying to nail a tumbleweed to a post.
 
-Now, Baseline is the sheriff 'round these parts that settles those arguments, giving us a clear signal on what's good to go. But a developer's work is never done. Who has the time to constantly check that data?
+Now, Baseline's the sheriff 'round these parts that settles those arguments, giving us a clear signal on what's good to go. But what developer has the time to constantly check that data?
 
 **Visuals:**
 > {
@@ -50,9 +50,9 @@ Now, Baseline is the sheriff 'round these parts that settles those arguments, gi
 > }
 
 **Technickel (Voiceover):**
-That's where my project, the Baseline MCP server, comes in.
+That's where my project, Baseline MCP server, comes in.
 
-Now, having the Baseline data is like having a good map of the territory. That's useful, for sure. But a map is just paper. It can't answer your questions.
+Now, having the Baseline data is like having a good map of the lands. That's useful, for sure. But a map is just paper. It can't answer your questions.
 
 **(Visuals:** {
 > **Storyboard Prompt:** "A photorealistic, cinematic still photo of a complex 3D animation in a 16:9 aspect ratio. A photorealistic, glowing glass brain is the central focus, suspended in a clean, white space. Tool icons (a magnifying glass, a scale, a lasso) made of glowing light are seen flying into the brain. The mood is transformative and intelligent.",
@@ -61,11 +61,11 @@ Now, having the Baseline data is like having a good map of the territory. That's
 > })
 
 **Technickel (Voiceover):**
-My server uses the Model-Context Protocol—MCP for short. The protocol turns that static map into a live expert you can talk to. It gives the AI a set of tools—not just to read the data, but to actively *work* with it. To query it, to compare it, to analyze it for you.
+My server uses the Model-Context Protocol - MCP for short. The protocol turns that static map into a live expert you can talk to. It gives the AI a set of tools - not just to read the data, but to actively *work* with it.
 
-So instead of just looking at the map, you're asking your guide, "What's the quickest route?" or "Is it safe to cross that river?" You get answers, not just data points.
+So instead of just looking at the map, you're asking your guide, "What's the quickest route?" or "Is it safe to cross that river?"
 
-This is what connects you to the *meaning* in the Baseline context, giving you the straight-up truth to cut through the noise and end decision fatigue for good.
+This is what connects you to the *meaning* in the Baseline context, giving you the straight-up truth to end decision fatigue for good.
 
 ---
 
@@ -82,7 +82,7 @@ This is what connects you to the *meaning* in the Baseline context, giving you t
 > }
 
 **Technickel (Voiceover):**
-Now, hold your horses. It's easy to think you've seen this show before; another so-called Baseline MCP. But most of the herd are just simple data wrappers. This ol' server is a different breed entirely, and it's got a few tricks up its sleeve.
+Now, hold your horses. It's easy to think you've seen this show before; another so-called Baseline MCP. But most of the herd are just simple data wrappers. This ol' server is a different breed entirely, and it's got a few (or over 20) tricks up its sleeve.
 
 ---
 
@@ -102,7 +102,7 @@ The MCP server comes equipped with a unique set of tools for some real sharpshoo
 > }
 
 **Technickel (Voiceover):**
-The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones—the brand new and the newly stable—so you can stay on the cutting edge without risking a broken user experience. It's a practical demonstration of how you can use Baseline's data to make informed decisions and accelerate your learning, cutting through the noise so you can focus on building with confidence.
+The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones—the brand new and the newly stable - so you can stay on the cutting edge without risking a broken user experience.
 
 **Visuals - Example 2**
 > {
@@ -113,7 +113,7 @@ The power of Baseline is knowing what's safe to build with *right now*. The Stud
 > }
 
 **Technickel (Voiceover):**
-It's one thing to know what's possible, but it's another to know what's in your own codebase. Point the tool at any file or directory to see how your existing projects measure up against Baseline. You can't know if you're quick on the draw or a step behind if you don't know where you stand. And by going further with a browser support report, you can get a clear picture of your project's compatibility, spot any issues, and make sure you're not leaving any users in the dust.
+It's one thing to know what's possible, but it's another to know what's in your own codebase. Point the tool at any file or directory to see how your existing projects measure up against Baseline. You can't know if you're quick on the draw or a step behind if you don't know where you stand. And by going further with a browser support report, you can get a clear picture of your project's compatibility, and make sure you're not leaving any users in the dust.
 
 **Visuals - Example 3**
 > {

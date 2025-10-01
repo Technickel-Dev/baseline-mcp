@@ -115,15 +115,16 @@ The power of Baseline is knowing what's safe to build with *right now*. The Stud
 **Technickel (Voiceover):**
 It's one thing to know what's possible, but it's another to know what's in your own codebase. Point the tool at any file or directory to see how your existing projects measure up against Baseline. You can't know if you're quick on the draw or a step behind if you don't know where you stand. And by going further with a browser support report, you can get a clear picture of your project's compatibility, spot any issues, and make sure you're not leaving any users in the dust.
 
-**Visuals - Example 3: The Text Lasso**
+**Visuals - Example 3**
 > {
-> **Scene Description:** "A photorealistic CGI animation in a 16:9 aspect ratio. A swirling vortex of code, documentation, and blog posts fills the screen.",
-> **Action:** "A glowing, energetic lasso flies out from the foreground and neatly ropes the entire vortex with a satisfying snap. The lasso pulls the text into the MCP server, which then spits out a single, clean 'Project Compatibility Report,' identifying every web feature mentioned and checking it against Baseline.",
-> **Audio - Soundscape:** "A 'whoosh' followed by a magical 'shimmer' sound."
+> **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio. A futuristic, holographic map is being projected from a device. The map shows different paths and points of interest, with one path being highlighted. The mood is adventurous and futuristic.",
+> **Scene Description:** "A crisp, high-resolution screen recording of a terminal in a 16:9 aspect ratio. The text is perfectly clear and has a modern, slightly glowing font.",
+> **Action:** "The command `mcp suggest-baseline-features --goal 'I want to create a cool 3D animation on my website'` is run. The terminal outputs a suggestion for using 'WebGL' and 'WebGPU', with links to the specifications and a brief explanation of each.",
+> **Audio - Soundscape:** "A futuristic 'suggestion' sound effect, like a gentle chime."
 > }
 
 **Technickel (Voiceover):**
-And with the **Text Lasso**, you can analyze your entire codebase, or even a bunch of articles, to automatically generate a full report on what's Baseline-ready and what ain't. It's all powered by the tools in this MCP.
+But what if you don't know what you're looking for? You don't even need to know the name of the feature. Just describe your goal, and the MCP will suggest the right baseline features for the job. It's like having a wise old prospector who knows where to find the mother lode, pointing you to the richest veins of the web platform.
 
 ---
 

@@ -30,9 +30,9 @@ Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, new trails
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A single, photorealistic, cinematic still image in a 16:9 aspect ratio, capturing a moment of chaos. A developer in a hoodie wears a black LED mask displaying a glitching, frustrated expression ('>_<'). They are recoiling from their computer monitor, out of which a stampede of highly-detailed, robotic longhorns is bursting forth in a blur of motion. The lighting is dramatic, coming from the screen. The mood is stressful and overwhelming.",
-> **Scene Description:** "A photorealistic and cinematic shot of a developer at a desk in a dimly lit room. The developer wears a black hoodie and a simple black mask that covers their entire face. The front of the mask is a vibrant LED display. The aspect ratio is 16:9. The screen, filled with browser compatibility tables, glows brightly.",
-> **Action:** "The LED mask displays a simple, neutral expression (e.g., '•_•'). Suddenly, the tables burst from the screen in a chaotic explosion, transforming into a highly detailed stampede of wild, robotic longhorns. The developer throws their hands up, and the camera zooms in on their mask as the LED expression changes to one of frustration and stress (e.g., '>_<', or frantic, glitching lines).",
+> **Storyboard Prompt:** "A single, photorealistic, cinematic still image in a 16:9 aspect ratio, capturing a moment of chaos. A developer in a hoodie with a frustrated emoji for a face recoils from their computer monitor, out of which a stampede of highly-detailed, robotic cattle is bursting forth in a blur of motion. The lighting is dramatic, coming from the screen. The mood is stressful and overwhelming.",
+> **Scene Description:** "A photorealistic and cinematic shot of a developer at a desk in a dimly lit room. The developer wears a black hoodie, and their face is a neutral emoji (😐). The aspect ratio is 16:9. The screen, filled with browser compatibility tables, glows brightly.",
+> **Action:** "The emoji face is neutral (😐). Suddenly, the tables burst from the screen in a chaotic explosion, transforming into a highly detailed stampede of wild, robotic cattle. The developer throws their hands up, and the camera zooms in on their face as the emoji changes to one of frustration and stress (😫).",
 > **Audio - Soundscape:** "The thunderous sound of a cattle stampede mixed with chaotic computer error noises."
 > }
 
@@ -43,9 +43,9 @@ Now, Baseline's the sheriff 'round these parts that settles those arguments, giv
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A single, photorealistic, cinematic still image in a 16:9 aspect ratio. A developer's LED mask is in the foreground, displaying a happy, relieved expression ('^_^'). Over their shoulder, a crisp, futuristic command-line interface is visible, showing a clean status report with green checkmarks. In the background, the previously chaotic robotic longhorns are now standing in a perfectly orderly line. The mood is calm and satisfying.",
+> **Storyboard Prompt:** "A single, photorealistic, cinematic still image in a 16:9 aspect ratio. A developer's emoji face is in the foreground, displaying a happy, relieved expression (😊). Over their shoulder, a crisp, futuristic command-line interface is visible, showing a clean status report with green checkmarks. In the background, the previously chaotic robotic longhorns are now standing in a perfectly orderly line. The mood is calm and satisfying.",
 > **Scene Description:** "A clean, futuristic command-line interface materializes in a 16:9 aspect ratio, stable shot. The text is crisp and vibrant. A single command is typed: `mcp get-status`. The background shows the blurred, chaotic stampede from the previous shot.",
-> **Action:** "The stampeding longhorns instantly freeze and arrange themselves into a single, orderly line. A simple, clear status report appears on the screen. The developer from before now looks relieved, their LED mask changing to a happy, satisfied expression (e.g., '^_^' or a simple smiling curve).",
+> **Action:** "The stampeding longhorns instantly freeze and arrange themselves into a single, orderly line. A simple, clear status report appears on the screen. The developer from before now looks relieved, their emoji face changing to a happy, satisfied expression (😊).",
 > **Audio - Soundscape:** "The chaotic noise abruptly stops, replaced by a satisfying 'cha-ching' sound and the gentle hum of a well-oiled machine."
 > }
 
@@ -75,9 +75,9 @@ This is what connects you to the *meaning* in the Baseline context, giving you t
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A single, photorealistic, cinematic still photo in a 16:9 aspect ratio. An extreme close-up on a cowboy hat and the black LED mask underneath it. The mask's expression is a simple, friendly smile ('^_^'). One hand, wearing a leather glove, is raised in a 'stop' gesture in front of the mask. The lighting is dramatic. The mood is commanding and direct.",
-> **Scene Description:** "An extreme close-up on Technickel's masked face in a 16:9 aspect ratio. The shot is photorealistic and highly detailed. His LED mask is showing a simple friendly smile ('^_^').",
-> **Action:** "He raises a leather-gloved hand in a 'stop' gesture. The LED smile on his mask flattens to a neutral line ('—_—') as if focusing. He looks directly into the camera.",
+> **Storyboard Prompt:** "A single, photorealistic, cinematic still photo in a 16:9 aspect ratio. An extreme close-up on a cowboy hat and the emoji face underneath it. The emoji is a simple, friendly smile (😊). One hand, wearing a leather glove, is raised in a 'stop' gesture in front of the face. The lighting is dramatic. The mood is commanding and direct.",
+> **Scene Description:** "An extreme close-up on Technickel's emoji face in a 16:9 aspect ratio. The shot is photorealistic and highly detailed. His face is a simple friendly smiling emoji (😊).",
+> **Action:** "He raises a leather-gloved hand in a 'stop' gesture. The smiling emoji on his face changes to a neutral emoji (😐) as if focusing. He looks directly into the camera.",
 > **Audio - Music:** "The music comes to a sudden, scratching halt, like a record scratch."
 > }
 
@@ -134,9 +134,9 @@ But what if you don't know what you're looking for? You don't even need to know 
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his LED mask showing a content smile ('^_^')) is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
+> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his emoji face showing a content smile (😊)) is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
 > **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, an AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent robotic horse.",
-> **Action:** "He rides slowly towards a binary sunset. As he gets smaller, he turns back slightly, and his LED mask gives a final, friendly smiling expression ('^_^') before he faces forward again. The sun dips below the horizon, and the entire screen quickly fades to black.",
+> **Action:** "He rides slowly towards a binary sunset. As he gets smaller, he turns back slightly, and his emoji face gives a final, friendly smiling expression (😊) before he faces forward again. The sun dips below the horizon, and the entire screen quickly fades to black.",
 > **Audio - Music:** "The main theme swells to a heroic, optimistic crescendo, then fades out with the screen."
 > }
 

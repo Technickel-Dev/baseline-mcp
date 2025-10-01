@@ -42,6 +42,28 @@ export const registerPrompts = (server: McpServer) => {
       ],
     })
   );
+
+  server.registerPrompt(
+    "suggest-baseline-features",
+    {
+      title: "Suggest Baseline Features",
+      description: "Suggests baseline features based on a description of a goal.",
+      argsSchema: {
+        goal: z.string().describe("The description of the goal."),
+      },
+    },
+    ({ goal }) => ({
+      messages: [
+        {
+          role: "assistant",
+          content: {
+            type: "text",
+            text: suggestBaselineFeaturePrompt(goal),
+          },
+        },
+      ],
+    })
+  );
 };
 
 export const studyGuidePrompt = `Create a visually appealing markdown study guide in the current directory for the newest and most recently stable web features.
@@ -61,3 +83,6 @@ Please format the study guide in a way that is easy to read and visually appeali
 
 export const findFeaturesInFilePrompt = (filePath: string) =>
   `Read the file at the path "${filePath}" and find the baseline features in it.`;
+
+export const suggestBaselineFeaturePrompt = (goal: string) =>
+  `Suggest one or more baseline features for the following goal: "${goal}"`;;

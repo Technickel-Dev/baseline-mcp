@@ -113,4 +113,4 @@ export const suggestBaselineFeaturePrompt = (goal: string) =>
   `Suggest one or more baseline features for the following goal: "${goal}"`;
 
 export const minBrowserSupportTablePrompt = (filePath: string) =>
-  `Get the minimum browser support for the features of the file or files in the directory "${filePath}". Output the results as an easy to read read report with reasoning and a minumum support table in a markdown file`;;
+  `Get the minimum browser support for the features of the file or files in the directory "${filePath}". Output the results as an easy to read read report with reasoning and a minumum support table in a markdown file`;

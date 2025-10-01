@@ -82,7 +82,7 @@ This is what connects you to the *meaning* in the Baseline context, giving you t
 > }
 
 **Technickel (Voiceover):**
-Now, hold your horses. It's easy to think you've seen this show before; another so-called Baseline MCP. But most of the herd are just simple data wrappers. This ol' server is a different breed entirely, and it's got a few (or over 20) tricks up its sleeve.
+Now, hold your horses. It's easy to think you've seen this show before; another so-called Baseline MCP. But most of the herd are just simple data wrappers. This ol' server is a different breed entirely, and it's got a few (or over 30) tricks up its sleeve.
 
 ---
 
@@ -119,7 +119,7 @@ It's one thing to know what's possible, but it's another to know what's in your 
 > {
 > **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio. A futuristic, holographic map is being projected from a device. The map shows different paths and points of interest, with one path being highlighted. The mood is adventurous and futuristic.",
 > **Scene Description:** "A crisp, high-resolution screen recording of a terminal in a 16:9 aspect ratio. The text is perfectly clear and has a modern, slightly glowing font.",
-> **Action:** "The command `mcp suggest-baseline-features --goal 'I want to create a cool 3D animation on my website'` is run. The terminal outputs a suggestion for using 'WebGL' and 'WebGPU', with links to the specifications and a brief explanation of each.",
+> **Action:** "The command `mcp suggest-baseline-features --goal 'I want to take my family photo album and make it a mosaic'` is run. The terminal outputs a suggestion for using 'Grid', with links to the specifications and a brief explanation of each.",
 > **Audio - Soundscape:** "A futuristic 'suggestion' sound effect, like a gentle chime."
 > }
 
@@ -134,8 +134,8 @@ But what if you don't know what you're looking for? You don't even need to know 
 
 **Visuals:**
 > {
-> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his emoji face showing a content smile (😊)) is riding a magnificent robotic horse made of chrome and glowing light pipes. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
-> **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, an AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent robotic horse.",
+> **Storyboard Prompt:** "A beautiful, and highly-detailed photorealistic cinematic still photo in a 16:9 aspect ratio. A cowboy figure (Technickel, with his emoji face showing a content smile (😊)) is riding a magnificent cyan wireframe holographic horse. They are captured mid-gallop, heading away from the camera towards a dramatic binary sunset over a digital ranch. The lighting is warm and cinematic. The mood is hopeful, conclusive, and epic.",
+> **Scene Description:** "A beautiful, highly detailed, photorealistic shot in a 16:9 aspect ratio. Technickel, an AI Wrangler, is back on the digital ranch, with cinematic sunset lighting. He's riding the magnificent cyan wireframe holographic horse.",
 > **Action:** "He rides slowly towards a binary sunset. As he gets smaller, he turns back slightly, and his emoji face gives a final, friendly smiling expression (😊) before he faces forward again. The sun dips below the horizon, and the entire screen quickly fades to black.",
 > **Audio - Music:** "The main theme swells to a heroic, optimistic crescendo, then fades out with the screen."
 > }

@@ -24,10 +24,10 @@ export const registerPrompts = (server: McpServer) => {
   server.registerPrompt(
     "find-features-in-file",
     {
-      title: "Find Features in File",
-      description: "Finds baseline features in a given file.",
+      title: "Find Features in File or Directory",
+      description: "Finds baseline features in a given file or directory.",
       argsSchema: {
-        filePath: z.string().describe("The path to the file to analyze."),
+        filePath: z.string().describe("The path to the file or directory to analyze."),
       },
     },
     ({ filePath }) => ({
@@ -107,7 +107,7 @@ For each feature in both sections, please include:
 Please format the study guide in a way that is easy to read and visually appealing, making use of emojis, using markdown features like headings, code blocks for examples, and tables if it makes sense.`;
 
 export const findFeaturesInFilePrompt = (filePath: string) =>
-  `Read the file at the path "${filePath}" and find the baseline features in it.`;
+  `Read the file or files in the directory at the path "${filePath}" and find the baseline features in them.`;
 
 export const suggestBaselineFeaturePrompt = (goal: string) =>
   `Suggest one or more baseline features for the following goal: "${goal}"`;

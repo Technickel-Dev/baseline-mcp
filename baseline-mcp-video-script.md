@@ -104,15 +104,16 @@ The MCP server comes equipped with a unique set of tools for some real sharpshoo
 **Technickel (Voiceover):**
 The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones—the brand new and the newly stable—so you can stay on the cutting edge without risking a broken user experience. It's a practical demonstration of how you can use Baseline's data to make informed decisions and accelerate your learning, cutting through the noise so you can focus on building with confidence.
 
-**Visuals - Example 2: The Browser Showdown**
+**Visuals - Example 2**
 > {
-> **Scene Description:** "A photorealistic CGI animation in a 16:9 aspect ratio with cinematic lighting. Two highly detailed, robotic cowboys face off in a classic western standoff on a dusty digital plain. One is clearly labeled 'Browser A,' the other 'Browser B.'",
-> **Action:** "A list of features appears between them. As the MCP's `browser.js` tool is mentioned, one cowboy's list gets all green checkmarks, and it tips its hat.",
-> **Audio - Soundscape:** "A classic western duel whistle."
+> **Storyboard Prompt:** "A photorealistic, cinematic still photo in a 16:9 aspect ratio. A futuristic code editor is shown with a file open. A glowing magnifying glass is scanning the code, highlighting web features. The mood is analytical and high-tech.",
+> **Scene Description:** "A crisp, high-resolution screen recording of a terminal in a 16:9 aspect ratio. The text is perfectly clear and has a modern, slightly glowing font.",
+> **Action:** "The command `mcp find-features-in-file --filePath 'example'` is run. The terminal outputs a list of web features found in the file. Then, the command `mcp min-browser-support-report --filePath 'example'` is run. A beautiful markdown report is generated and displayed, showing the minimum browser versions required for the features in the file.",
+> **Audio - Soundscape:** "A futuristic 'scanning' sound effect, followed by a 'report generated' sound."
 > }
 
 **Technickel (Voiceover):**
-Use the **Browser Tool** to script a showdown. See which of your target browsers has the best support for a whole list of modern features you want to use.
+It's one thing to know what's possible, but it's another to know what's in your own codebase. Point the tool at any file or directory to see how your existing projects measure up against Baseline. You can't know if you're quick on the draw or a step behind if you don't know where you stand. And by going further with a browser support report, you can get a clear picture of your project's compatibility, spot any issues, and make sure you're not leaving any users in the dust.
 
 **Visuals - Example 3: The Text Lasso**
 > {

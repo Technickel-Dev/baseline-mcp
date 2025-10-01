@@ -20,7 +20,7 @@
 > }
 
 **Technickel (Voiceover, calm and confident):**
-Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, new trails are blazed every day. But this ain't a lawless land. Thankfully, a set of rules is bringing order. They call it Baseline.
+Howdy. I'm Technickel, an AI Wrangler. Out here on the digital ranch, new trails are blazed every day. But this ain't no lawless land. Thankfully, a set of rules are bringing order. They call it Baseline.
 
 ---
 
@@ -102,7 +102,7 @@ The MCP server comes equipped with a unique set of tools for some real sharpshoo
 > }
 
 **Technickel (Voiceover):**
-The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones—the brand new and the newly stable - so you can stay on the cutting edge without risking a broken user experience.
+The power of Baseline is knowing what's safe to build with *right now*. The Study Guide prompt is a perfect example of turning that knowledge into action. It doesn't just show you a list of features; it curates the most important ones - the brand new and the newly stable - so you can stay on the cutting edge without risking a broken user experience.
 
 **Visuals - Example 2**
 > {

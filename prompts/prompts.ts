@@ -107,7 +107,7 @@ For each feature in both sections, please include:
 Please format the study guide in a way that is easy to read and visually appealing, making use of emojis, using markdown features like headings, code blocks for examples, and tables if it makes sense.`;
 
 export const findFeaturesInFilePrompt = (filePath: string) =>
-  `Read the file or files in the directory at the path "${filePath}" and find the baseline features in them. Provide a full list of the features found in the output.`;
+  `Read the file or files in the directory at the path "${filePath}" and find the baseline features in them. Print out a full list of the feature names found to the console.`;
 
 export const suggestBaselineFeaturePrompt = (goal: string) =>
   `Suggest one or more baseline features for the following goal: "${goal}"`;

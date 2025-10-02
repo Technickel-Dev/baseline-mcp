@@ -106,8 +106,9 @@ For each feature in both sections, please include:
 
 Please format the study guide in a way that is easy to read and visually appealing, making use of emojis, using markdown features like headings, code blocks for examples, and tables if it makes sense.`;
 
+// Gemini CLI markdown rendering bug https://github.com/google-gemini/gemini-cli/issues/8539
 export const findFeaturesInFilePrompt = (filePath: string) =>
-  `Read the file or files in the directory at the path "${filePath}" and find the baseline features in them. Print out a full list of the feature names found to the console.`;
+  `Read the file or files in the directory at the path "${filePath}" and find the baseline features in them. Print out a full list of the feature names found to the console as a string, no markdown.`;
 
 export const suggestBaselineFeaturePrompt = (goal: string) =>
   `Suggest one or more baseline features for the following goal: "${goal}"`;

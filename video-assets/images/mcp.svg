@@ -26,9 +26,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
-     inkscape:zoom="0.38576101"
-     inkscape:cx="5.1845571"
-     inkscape:cy="322.73868"
+     inkscape:zoom="3.0860881"
+     inkscape:cx="61.566616"
+     inkscape:cy="132.04419"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -36,20 +36,8 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     d="m 6,80.873966 67.8823,-67.8822 c 9.3727,-9.3726005 24.5687,-9.3726005 33.9407,0 v 0 c 9.373,9.3725 9.373,24.5685 0,33.9411 l -51.2649,51.2653"
-     stroke="#000000"
-     stroke-width="12"
-     stroke-linecap="round"
-     id="path1" />
-  <path
-     d="m 57.2653,97.491166 50.5577,-50.5583 c 9.373,-9.3726 24.569,-9.3726 33.942,0 l 0.353,0.3535 c 9.373,9.3726 9.373,24.5686 0,33.9411 L 80.7248,142.62117 c -3.1242,3.124 -3.1242,8.189 0,11.313 l 12.6062,12.607"
-     stroke="#000000"
-     stroke-width="12"
-     stroke-linecap="round"
-     id="path2" />
-  <path
      d="m 57.265,97.491146 50.5577,-50.558 c 9.373,-9.373 24.569,-9.373 33.942,0 l 0.353,0.353 c 9.373,9.373 9.373,24.569 0,33.941 L 80.7245,142.62115"
-     stroke="#000000"
+     stroke="#c4eed0"
      stroke-width="12"
      stroke-linecap="round"
      id="path2-7"
@@ -64,7 +52,7 @@
      sodipodi:nodetypes="cccc" />
   <path
      d="m 6,80.874132 67.8823,-67.8822 c 9.3727,-9.3726005 24.5687,-9.3726005 33.9407,0 v 0 c 9.373,9.3725 9.373,24.5685 0,33.9411 L 56.5581,98.198336"
-     stroke="#000000"
+     stroke="#c4eed0"
      stroke-width="12"
      stroke-linecap="round"
      id="path1-5"

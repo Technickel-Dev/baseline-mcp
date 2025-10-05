@@ -10,8 +10,8 @@ If you're seeing this, you've probably already done this step. Congrats!
 # create a new project in the current directory
 npx sv create
 
-# create a new project in demo
-npx sv create demo
+# create a new project in baseline-demo
+npx sv create baseline-demo
 ```
 
 ## Developing

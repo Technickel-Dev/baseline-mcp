@@ -26,5 +26,6 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BASELINE_MCP_DEMO }}
           channelId: live
           projectId: baseline-mcp-demo
+          entryPoint: ./baseline-demo
         env:
           FIREBASE_CLI_EXPERIMENTS: webframeworks

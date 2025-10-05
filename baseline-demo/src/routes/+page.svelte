@@ -47,7 +47,6 @@
     margin-bottom: 5px;
   }
 
-  input,
   textarea {
     width: 100%;
     padding: 8px;

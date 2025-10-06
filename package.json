@@ -9,7 +9,7 @@
   ],
   "type": "module",
   "bin": {
-    "mcp-server": "node dist/server.js"
+    "server": "dist/server.js"
   },
   "scripts": {
     "build": "tsc",

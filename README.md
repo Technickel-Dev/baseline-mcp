@@ -12,33 +12,28 @@ A server for querying baseline web features data. It is built using the `@modelc
 
 ## Usage
 
-This tool can be used via `npx` for a quick, installation-free experience.
+There are two ways to use the Baseline MCP Server:
 
-This method requires authenticating with GitHub Packages once.
-
-<details>
-<summary>Click for first-time authentication setup</summary>
-
-1.  Create a [Personal Access Token (PAT)](https://github.com/settings/tokens) with the `read:packages` scope.
-
-2.  Create or edit the `.npmrc` file in your user home directory (`~/.npmrc`) and add the following lines, replacing `YOUR_PERSONAL_ACCESS_TOKEN` with your token.
-
-    ```
-    @Technickel-Dev:registry=https://npm.pkg.github.com/
-    //npm.pkg.github.com/:_authToken=YOUR_PERSONAL_ACCESS_TOKEN
-    ```
-
-</details>
-
-Once authenticated, you can run the server directly:
-
-```sh
-npx @Technickel-Dev/baseline-mcp
-```
+1.  **Demo Client:** Try the demo client at [https://baseline-mcp-demo.web.app/](https://baseline-mcp-demo.web.app/).
+2.  **Your Own Client:** You can connect your own MCP-compatible client to the server. See the "Connecting a Client" section below for details.
 
 ### Connecting a Client
 
 Use the accordion below to configure your client.
+
+<details>
+<summary>Connect with Gemini CLI & Gemini Code Assist</summary>
+
+In your `~/.gemini/settings.json`, add one of the following objects to the `mcpServers` array.
+
+```json
+{
+  "name": "baseline-mcp",
+  "command": ["npx", "mcp-remote", "https://baseline-mcp.netlify.app/mcp"]
+}
+```
+
+</details>
 
 <details>
 <summary>Connect with VS Code Copilot</summary>
@@ -48,26 +43,11 @@ In your `settings.json` or `.vscode/mcp.json`, add the following configuration.
 ```json
 "mcp": {
   "servers": {
-    "baseline-suggester": {
+    "baseline-mcp": {
       "command": "npx",
-      "args": ["@Technickel-Dev/baseline-mcp"]
+      "args": ["mcp-remote", "https://baseline-mcp.netlify.app/mcp"]
     }
   }
-}
-```
-
-</details>
-
-<details>
-<summary>Connect with Gemini CLI & Gemini Code Assist</summary>
-
-In your `~/.gemini/settings.json`, add one of the following objects to the `mcpServers` array.
-
-```json
-{
-  "type": "stdio",
-  "name": "baseline-suggester",
-  "command": ["npx", "@Technickel-Dev/baseline-mcp"]
 }
 ```
 
@@ -89,10 +69,23 @@ If you want to modify or contribute to this tool, follow these instructions for 
     npm install
     ```
 
-2.  **Run the server:**
+2. **Build the server:**
+    ```sh
+    npm run build
+    ```
+
+3.  **Run the server:**
     ```sh
     npm start
     ```
+
+### Inspecting the Server
+
+To inspect the server's capabilities, you can use the `inspect` script. This is useful for seeing the full list of tools and prompts that the server exposes.
+
+```sh
+npm run inspect
+```
 
 ## Interacting with the Server
 

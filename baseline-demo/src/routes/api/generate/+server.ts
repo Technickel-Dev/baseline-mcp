@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export async function POST({ request }) {
-  const scriptPath = path.resolve(__dirname, "../../../lib/mcp/server.js");
+  const scriptPath = path.resolve(__dirname, "../../../lib/server/mcp/server.js");
 
   const transport = new StdioClientTransport({
     command: "node",

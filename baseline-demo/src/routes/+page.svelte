@@ -1,8 +1,11 @@
 <script lang="ts">
   let prompt: string = "";
   let response: string = "";
+  let loading: boolean = false;
 
   async function generateContent() {
+    loading = true;
+    response = "";
     const res = await fetch("/api/generate", {
       method: "POST",
       headers: {
@@ -12,6 +15,7 @@
     });
     const data = await res.json();
     response = data.text;
+    loading = false;
   }
 </script>
 
@@ -26,6 +30,10 @@
   <textarea id="prompt" bind:value={prompt}></textarea>
 
   <button on:click={generateContent}>Generate Content</button>
+
+  {#if loading}
+    <p>Loading... Hold your horses, this may take a little</p>
+  {/if}
 
   {#if response}
     <div>

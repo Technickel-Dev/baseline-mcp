@@ -1,14 +1,13 @@
 import { GOOGLE_API_KEY } from "$env/static/private";
 import { GoogleGenAI, mcpToTool } from "@google/genai";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
-
-const transport = new StdioClientTransport({
-  command: "npx",
-  args: ["-y", "@technickel/baseline-mcp"],
-});
+import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
 export async function POST({ request }) {
+  const transport = new StreamableHTTPClientTransport(
+    new URL("https://baseline-mcp.netlify.app/mcp")
+  );
+
   const client = new Client({
     name: "example-client",
     version: "1.0.0",

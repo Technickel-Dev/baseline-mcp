@@ -2,18 +2,16 @@
   "name": "@technickel/baseline-mcp",
   "version": "1.9.1",
   "description": "MCP Server for baseline feature suggestions",
-  "main": "dist/server.js",
+  "main": "dist/mcp.js",
   "files": [
     "dist",
     "bin"
   ],
   "type": "module",
-  "bin": "dist/server.js"
-  ,
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
-    "inspect": "tsc && npx @modelcontextprotocol/inspector node ./dist/server.js"
+    "start": "node dist/mcp.js",
+    "inspect": "tsc && npx @modelcontextprotocol/inspector node ./dist/mcp.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +19,8 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
+    "@netlify/functions": "^4.2.7",
+    "fetch-to-node": "^2.1.0",
     "web-features": "^3.0.0"
   },
   "devDependencies": {

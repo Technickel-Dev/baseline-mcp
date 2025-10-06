@@ -3,12 +3,12 @@ import { GoogleGenAI, mcpToTool } from "@google/genai";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
-const transport = new StdioClientTransport({
-  command: "npx",
-  args: ["-y", "github:@Technickel-Dev/baseline-mcp"],
-});
-
 export async function POST({ request }) {
+  const transport = new StdioClientTransport({
+    command: "npx",
+    args: ["-y", "technickel/baseline-mcp"],
+  });
+
   const client = new Client({
     name: "example-client",
     version: "1.0.0",
@@ -23,17 +23,28 @@ export async function POST({ request }) {
     console.log(error);
   }
 
-  const content = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: prompt,
-    config: {
-      tools: [mcpToTool(client)],
-    },
-  });
+  let text = "";
+  try {
+    const content = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
+      config: {
+        tools: [mcpToTool(client)],
+      },
+    });
 
-  await client.close();
+    text = content.text || "";
+  } catch (error) {
+    console.log(error);
+  }
 
-  return new Response(JSON.stringify({ text: content.text }), {
+  try {
+    await client.close();
+  } catch (error) {
+    console.log(error);
+  }
+
+  return new Response(JSON.stringify({ text: text }), {
     headers: {
       "Content-Type": "application/json",
     },

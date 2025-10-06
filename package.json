@@ -1,5 +1,5 @@
 {
-  "name": "@technickel-dev/baseline-mcp",
+  "name": "@technickel/baseline-mcp",
   "version": "1.6.6",
   "description": "MCP Server for baseline feature suggestions",
   "main": "dist/server.js",
@@ -20,12 +20,8 @@
     "type": "git",
     "url": "git+https://github.com/Technickel-Dev/baseline-mcp.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
-    "@technickel-dev/baseline-mcp": "github:Technickel-Dev/baseline-mcp",
     "web-features": "^3.0.0"
   },
   "devDependencies": {

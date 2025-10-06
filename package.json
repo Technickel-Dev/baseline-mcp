@@ -9,7 +9,7 @@
   ],
   "type": "module",
   "bin": {
-    "baseline-mcp": "dist/server.js"
+    "baseline-mcp": "bin/baseline-mcp"
   },
   "scripts": {
     "build": "tsc",

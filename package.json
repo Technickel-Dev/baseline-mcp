@@ -2,7 +2,11 @@
   "name": "@technickel-dev/baseline-mcp",
   "version": "1.6.0",
   "description": "MCP Server for baseline feature suggestions",
-  "main": "server.js",
+  "main": "dist/server.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
   "type": "module",
   "bin": {
     "baseline-mcp": "./bin/baseline-mcp"
@@ -21,6 +25,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
+    "@technickel-dev/baseline-mcp": "github:Technickel-Dev/baseline-mcp",
     "web-features": "^3.0.0"
   },
   "devDependencies": {

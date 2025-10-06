@@ -1,5 +1,9 @@
 # Baseline MCP Server
 
+## What it does
+
+This project is an MCP server that provides a set of tools and prompts for querying information about Baseline web features. It can be used by AI assistants to answer questions about web standards, browser compatibility, and feature details. It also includes a demo client that showcases the server's capabilities.
+
 ## Inspiration
 
 The inspiration for this project was to explore the interaction between Baseline and Model Context Protocol (MCP) while building a practical tool for web developers. I wanted to create a server that could provide accurate and up-to-date information about Baseline web features, empowering AI assistants to give better, more informed answers to developers' questions.
@@ -16,6 +20,10 @@ This project was a huge learning experience. While an avid user of MCP, I had ne
 
 I also got to see how AI fits into the creative process. I used Google Veo, Imagen and Lyria to bring my video's vision to life, which was an eye-opening experience. It showed me how AI can be a powerful tool for creativity, not just for technical tasks.
 
+## Accomplishments that we're proud of
+
+Like many developers, I have a graveyard of unfinished projects. Getting this project to the finish line, in a state that I can actually be proud of, is a huge accomplishment for me. It's a motivator, not just for future coding projects, but for other parts of my life as well. It's a reminder that with focus and perseverance, it's possible to see things through to the end.
+
 ## How I Built It
 
 The project is built on a foundation of modern web technologies:
@@ -31,3 +39,7 @@ The project is built on a foundation of modern web technologies:
 The biggest challenge was the learning curve of MCP. With no prior experience building an MCP server or client, I had to learn everything from the ground up. It was a difficult but ultimately rewarding process.
 
 Another significant challenge was the client-server integration. Getting the client and server to communicate seamlessly, not just on my local machine but also over the internet, was a painful endeavor. There was a lot of debugging and head scratching involved, but seeing it all come together and work for others to enjoy made it all worthwhile.
+
+## What's next for baseline-mcp
+
+I'm excited to see what people think of the project and I'm very open to feedback and improvements. As we continue to make our way through my favorite month of the open-source year, Hacktoberfest, I encourage everyone to try it out, file issues, and contribute to making it even better.

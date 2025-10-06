@@ -1,6 +1,6 @@
 {
   "name": "@technickel/baseline-mcp",
-  "version": "1.6.8",
+  "version": "1.6.9",
   "description": "MCP Server for baseline feature suggestions",
   "main": "dist/server.js",
   "files": [
@@ -22,9 +22,12 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
+    "express": "^5.1.0",
     "web-features": "^3.0.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.2",
     "typescript": "^5.9.2"
   }
 }

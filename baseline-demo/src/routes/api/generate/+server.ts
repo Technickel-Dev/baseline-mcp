@@ -6,7 +6,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 export async function POST({ request }) {
   const transport = new StdioClientTransport({
     command: "node",
-    args: ["./src/mcp/server.js"],
+    args: ["static/mcp/server.js"],  // args is the sveltekit static path to the MCP server file
   });
 
   const client = new Client({

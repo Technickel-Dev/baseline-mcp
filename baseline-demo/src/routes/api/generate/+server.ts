@@ -2,11 +2,18 @@ import { GOOGLE_API_KEY } from "$env/static/private";
 import { GoogleGenAI, mcpToTool } from "@google/genai";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+import { fileURLToPath } from "url";
+import path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function POST({ request }) {
+  const scriptPath = path.resolve(__dirname, "../../../lib/mcp/server.js");
+
   const transport = new StdioClientTransport({
     command: "node",
-    args: ["static/mcp/server.js"],  // args is the sveltekit static path to the MCP server file
+    args: [scriptPath],
   });
 
   const client = new Client({

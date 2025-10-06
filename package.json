@@ -8,9 +8,8 @@
     "bin"
   ],
   "type": "module",
-  "bin": {
-    "mcp": "dist/server.js"
-  },
+  "bin": "dist/server.js"
+  ,
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
@@ -22,11 +21,9 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
-    "express": "^5.1.0",
     "web-features": "^3.0.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.3",
     "@types/node": "^24.6.2",
     "typescript": "^5.9.2"
   }

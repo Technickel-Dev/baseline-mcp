@@ -17,7 +17,7 @@ export async function POST({ request }) {
 
   const { prompt } = await request.json();
 
-  await client.connect(transport, { timeout: 600000 });
+  await client.connect(transport);
 
   let text = "";
   // try {

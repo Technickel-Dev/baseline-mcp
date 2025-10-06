@@ -1,6 +1,6 @@
 {
   "name": "@technickel/baseline-mcp",
-  "version": "1.8.9",
+  "version": "1.9.1",
   "description": "MCP Server for baseline feature suggestions",
   "main": "dist/server.js",
   "files": [

@@ -6,7 +6,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 export async function POST({ request }) {
   const transport = new StdioClientTransport({
     command: "npx",
-    args: ["-y", "technickel/baseline-mcp"],
+    args: ["-y", "@technickel/baseline-mcp"],
   });
 
   const client = new Client({
@@ -17,32 +17,28 @@ export async function POST({ request }) {
 
   const { prompt } = await request.json();
 
-  try {
-    await client.connect(transport);
-  } catch (error) {
-    console.log(error);
-  }
+  await client.connect(transport, { timeout: 600000 });
 
   let text = "";
-  try {
-    const content = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
-      config: {
-        tools: [mcpToTool(client)],
-      },
-    });
+  // try {
+  //   const content = await ai.models.generateContent({
+  //     model: "gemini-2.5-flash",
+  //     contents: prompt,
+  //     config: {
+  //       tools: [mcpToTool(client)],
+  //     },
+  //   });
 
-    text = content.text || "";
-  } catch (error) {
-    console.log(error);
-  }
+  //   text = content.text || "";
+  // } catch (error) {
+  //   console.log(error);
+  // }
 
-  try {
-    await client.close();
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  //   await client.close();
+  // } catch (error) {
+  //   console.log(error);
+  // }
 
   return new Response(JSON.stringify({ text: text }), {
     headers: {

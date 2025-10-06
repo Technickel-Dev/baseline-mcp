@@ -6,7 +6,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 export async function POST({ request }) {
   const transport = new StdioClientTransport({
     command: "node",
-    args: ["../dist/server.js"],
+    args: ["static/mcp/server.js"],
   });
 
   const client = new Client({

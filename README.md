@@ -8,14 +8,11 @@ A server for querying baseline web features data. It is built using the `@modelc
 
 ## Prerequisites
 
-- Docker installed on your system.
 - For local development, you will also need Node.js and npm.
 
 ## Usage
 
-This tool can be used in two ways: via `npx` for a quick, installation-free experience, or via `Docker` for a containerized environment.
-
-### Method 1: Using NPX
+This tool can be used via `npx` for a quick, installation-free experience.
 
 This method requires authenticating with GitHub Packages once.
 
@@ -39,42 +36,21 @@ Once authenticated, you can run the server directly:
 npx @Technickel-Dev/baseline-mcp
 ```
 
-### Method 2: Using Docker
-
-This method uses a pre-built Docker image and requires no authentication.
-
-```sh
-docker run -i --rm ghcr.io/Technickel-Dev/baseline-mcp:latest
-```
-
 ### Connecting a Client
 
-Use the accordion below to configure your client. Choose the command that matches your preferred method (`npx` or `Docker`).
+Use the accordion below to configure your client.
 
 <details>
 <summary>Connect with VS Code Copilot</summary>
 
 In your `settings.json` or `.vscode/mcp.json`, add the following configuration. 
 
-**For NPX:**
 ```json
 "mcp": {
   "servers": {
     "baseline-suggester": {
       "command": "npx",
       "args": ["@Technickel-Dev/baseline-mcp"]
-    }
-  }
-}
-```
-
-**For Docker:**
-```json
-"mcp": {
-  "servers": {
-    "baseline-suggester": {
-      "command": "docker",
-      "args": ["run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
     }
   }
 }
@@ -87,21 +63,11 @@ In your `settings.json` or `.vscode/mcp.json`, add the following configuration.
 
 In your `~/.gemini/settings.json`, add one of the following objects to the `mcpServers` array.
 
-**For NPX:**
 ```json
 {
   "type": "stdio",
   "name": "baseline-suggester",
   "command": ["npx", "@Technickel-Dev/baseline-mcp"]
-}
-```
-
-**For Docker:**
-```json
-{
-  "type": "stdio",
-  "name": "baseline-suggester",
-  "command": ["docker", "run", "-i", "--rm", "ghcr.io/Technickel-Dev/baseline-mcp:latest"]
 }
 ```
 

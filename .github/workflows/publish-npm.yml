@@ -24,7 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and Publish package
-        run: npm run build && npm publish
+      - name: Build
+        run: npm run build
+
+      - name: Publish package
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'baseline-demo/**'
 
 env:
   GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}

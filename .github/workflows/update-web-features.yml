@@ -1,0 +1,37 @@
+name: Update Web Features
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # Runs every Sunday at midnight
+  workflow_dispatch:
+jobs:
+  update-web-features:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Update web features in root
+        run: npm install web-features@latest
+
+      - name: Build root project
+        run: npm run build
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update web-features to latest version"
+          title: "Update web-features to latest version"
+          body: "This pull request updates the web-features package to the latest version."
+          branch: "update-web-features"
+          labels: automated

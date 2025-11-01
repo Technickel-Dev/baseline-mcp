@@ -2,7 +2,7 @@
   "name": "@technickel/baseline-mcp",
   "version": "1.9.1",
   "description": "MCP Server for baseline feature suggestions",
-  "main": "dist/mcp.js",
+  "main": "dist/server.js",
   "files": [
     "dist",
     "bin"
@@ -10,8 +10,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/mcp.js",
-    "inspect": "tsc && npx @modelcontextprotocol/inspector node ./dist/mcp.js"
+    "start": "node dist/server.js",
+    "inspect": "tsc && npx @modelcontextprotocol/inspector node ./dist/server.js"
   },
   "repository": {
     "type": "git",

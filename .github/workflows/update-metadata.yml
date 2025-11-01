@@ -1,0 +1,30 @@
+name: Update Web Feature Metadata
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # Runs every Sunday at midnight
+  workflow_dispatch:
+
+jobs:
+  update-metadata:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Download latest metadata
+        run: curl -o data/combined-data.json https://raw.githubusercontent.com/web-platform-dx/web-features-mappings/main/mappings/combined-data.json
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update web-features metadata"
+          title: "Update web-features metadata"
+          body: "This pull request updates the web-features metadata to the latest version."
+          branch: "update-web-features-metadata"
+          labels: automated

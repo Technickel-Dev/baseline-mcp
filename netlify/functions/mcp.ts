@@ -2,11 +2,12 @@ import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { toFetchResponse, toReqRes } from "fetch-to-node";
 import { JSONRPCError } from "@modelcontextprotocol/sdk/types.js";
-import { registerFeatureTools } from "../../tools/feature";
-import { registerBrowserTools } from "../../tools/browser";
-import { registerGroupTools } from "../../tools/groups";
-import { registerSnapshotTools } from "../../tools/snapshot";
-import { registerPrompts } from "../../prompts/prompts";
+import { registerFeatureTools } from "../../tools/feature.js";
+import { registerBrowserTools } from "../../tools/browser.js";
+import { registerGroupTools } from "../../tools/groups.js";
+import { registerSnapshotTools } from "../../tools/snapshot.js";
+import { registerMetadataTools } from "../../tools/metadata.js";
+import { registerPrompts } from "../../prompts/prompts.js";
 
 export default async (req: Request) => {
   try {
@@ -55,7 +56,7 @@ export default async (req: Request) => {
   }
 };
 
-function getServer(): McpServer {
+export function getServer(): McpServer {
   const server: McpServer = new McpServer({
     name: "baseline-mcp",
     version: "1.0.0",
@@ -66,6 +67,7 @@ function getServer(): McpServer {
   registerBrowserTools(server);
   registerGroupTools(server);
   registerSnapshotTools(server);
+  registerMetadataTools(server);
   registerPrompts(server);
 
   console.log("Starting MCP server...");

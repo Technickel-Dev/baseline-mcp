@@ -84,5 +84,5 @@ export function getServer(): McpServer {
 // This can be any path you want but you'll need to ensure the
 // mcp server config you use/share matches this path.
 export const config = {
-  path: "/mcp/*",
+  path: ["/mcp", "/mcp/health"],
 };

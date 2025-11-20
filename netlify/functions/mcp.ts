@@ -10,6 +10,11 @@ import { registerMetadataTools } from "../../tools/metadata.js";
 import { registerPrompts } from "../../prompts/prompts.js";
 
 export default async (req: Request) => {
+  const url = new URL(req.url);
+  if (url.pathname.endsWith("/health")) {
+    return new Response("OK", { status: 200 });
+  }
+
   try {
     // for stateless MCP, we'll only use the POST requests that are sent
     // with event information for the init phase and resource/tool requests
@@ -79,5 +84,5 @@ export function getServer(): McpServer {
 // This can be any path you want but you'll need to ensure the
 // mcp server config you use/share matches this path.
 export const config = {
-  path: "/mcp",
+  path: "/mcp/*",
 };

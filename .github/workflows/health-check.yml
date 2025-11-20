@@ -1,0 +1,11 @@
+name: Health Check
+on:
+  schedule:
+    - cron: '0 * * * *' # Runs every hour
+  workflow_dispatch: # Allows manual triggering
+jobs:
+  check-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check server health
+        run: curl --fail -sS https://baseline-mcp.netlify.app/mcp/health

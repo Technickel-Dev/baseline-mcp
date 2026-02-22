@@ -21,7 +21,7 @@
     "@modelcontextprotocol/sdk": "^1.18.1",
     "@netlify/functions": "^5.1.0",
     "fetch-to-node": "^2.1.0",
-    "web-features": "^3.16.0"
+    "web-features": "^3.17.0"
   },
   "devDependencies": {
     "@types/node": "^24.6.2",

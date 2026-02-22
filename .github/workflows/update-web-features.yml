@@ -36,7 +36,7 @@ jobs:
           commit-message: "Update web-features to latest version"
           title: "Update web-features to latest version"
           body: |
-            This pull request updates the [web-features](https://github.com/mdn/web-features) package to the latest version.
+            This pull request updates the [web-features](https://github.com/web-platform-dx/web-features) package to the latest version.
             
             This PR was created by the [Update Web Features](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-web-features.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository.
           branch: "update-web-features"

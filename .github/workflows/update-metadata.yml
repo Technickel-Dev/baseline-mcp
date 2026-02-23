@@ -16,8 +16,73 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Get recent commits
+        id: source-info
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO="web-platform-dx/web-features-mappings"
+
+          RELEASE=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/releases/latest")
+
+          RELEASE_TAG=$(echo "$RELEASE" | jq -r '.tag_name // ""')
+          RELEASE_URL=$(echo "$RELEASE" | jq -r '.html_url // ""')
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body // "No release notes available."')
+
+          COMMITS=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/commits?path=mappings/combined-data.json&per_page=10" \
+            | jq -r '
+              [.[] |
+              "- [`" + (.sha[:7]) + "`](" + .html_url + ") " + (.commit.message | split("\n")[0]) + " (" + (.commit.author.date[:10]) + ")"]
+              | join("\n")')
+
+          {
+            echo "release_tag=$RELEASE_TAG"
+            echo "release_url=$RELEASE_URL"
+            echo "release_notes<<RNEOF"
+            echo "$RELEASE_NOTES"
+            echo "RNEOF"
+            echo "commits<<CEOF"
+            echo "$COMMITS"
+            echo "CEOF"
+          } >> $GITHUB_OUTPUT
+
       - name: Download latest metadata
         run: curl -o tools/data/combined-data.json https://raw.githubusercontent.com/web-platform-dx/web-features-mappings/main/mappings/combined-data.json
+
+      - name: Generate PR body
+        id: pr-body
+        env:
+          RELEASE_TAG: ${{ steps.source-info.outputs.release_tag }}
+          RELEASE_URL: ${{ steps.source-info.outputs.release_url }}
+          RELEASE_NOTES: ${{ steps.source-info.outputs.release_notes }}
+          COMMITS: ${{ steps.source-info.outputs.commits }}
+        run: |
+          REPO="web-platform-dx/web-features-mappings"
+
+          {
+            echo "body<<PREOF"
+            echo "This pull request updates the [web-features-mappings](https://github.com/$REPO) metadata to the latest version."
+            echo ""
+            echo "## Release Notes"
+            echo "*Sourced from [web-features-mappings's releases](${RELEASE_URL:-https://github.com/$REPO/releases}).*"
+            echo ""
+            echo "$RELEASE_NOTES"
+            echo ""
+            echo "## Recent Commits"
+            echo "*Sourced from [web-features-mappings's commits](https://github.com/$REPO/commits/main/mappings/combined-data.json).*"
+            echo ""
+            echo "$COMMITS"
+            echo ""
+            echo "---"
+            echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."
+            echo "PREOF"
+          } >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
@@ -25,9 +90,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update web-features metadata"
           title: "Update web-features metadata"
-          body: |
-            This pull request updates the [web-features-mappings](https://github.com/web-platform-dx/web-features-mappings) to the latest version.
-
-            This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository.
+          body: ${{ steps.pr-body.outputs.body }}
           branch: "update-web-features-metadata"
           labels: automated

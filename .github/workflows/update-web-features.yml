@@ -23,21 +23,78 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
+      - name: Get current version
+        id: current-version
+        run: |
+          CURRENT=$(node -p "require('./node_modules/web-features/package.json').version" 2>/dev/null || echo "0.0.0")
+          echo "version=$CURRENT" >> $GITHUB_OUTPUT
+
       - name: Update web features in root
         run: npm install web-features@latest
 
       - name: Build root project
         run: npm run build
 
+      - name: Get new version
+        id: new-version
+        run: |
+          NEW=$(node -p "require('./node_modules/web-features/package.json').version")
+          echo "version=$NEW" >> $GITHUB_OUTPUT
+
+      - name: Generate PR body
+        id: pr-body
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OLD_VERSION: ${{ steps.current-version.outputs.version }}
+          NEW_VERSION: ${{ steps.new-version.outputs.version }}
+        run: |
+          REPO="web-platform-dx/web-features"
+
+          RELEASE_NOTES=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/releases/tags/v$NEW_VERSION" \
+            | jq -r '.body // "No release notes available."')
+
+          COMMITS=$(curl -s \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/compare/v$OLD_VERSION...v$NEW_VERSION" \
+            | jq -r '
+              if .commits then
+                [.commits[] |
+                "- [`" + (.sha[:7]) + "`](" + .html_url + ") " + (.commit.message | split("\n")[0])]
+                | join("\n")
+              else
+                "Unable to fetch commits."
+              end' \
+            | head -20)
+
+          {
+            echo "body<<PREOF"
+            echo "This pull request updates the [web-features](https://github.com/$REPO) package from \`v$OLD_VERSION\` to \`v$NEW_VERSION\`."
+            echo ""
+            echo "## Release Notes"
+            echo "*Sourced from [web-features's releases](https://github.com/$REPO/releases/tag/v$NEW_VERSION).*"
+            echo ""
+            echo "$RELEASE_NOTES"
+            echo ""
+            echo "## Commits"
+            echo "*Sourced from [web-features's compare](https://github.com/$REPO/compare/v$OLD_VERSION...v$NEW_VERSION).*"
+            echo ""
+            echo "$COMMITS"
+            echo ""
+            echo "---"
+            echo "This PR was created by the [Update Web Features](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-web-features.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."
+            echo "PREOF"
+          } >> $GITHUB_OUTPUT
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update web-features to latest version"
-          title: "Update web-features to latest version"
-          body: |
-            This pull request updates the [web-features](https://github.com/web-platform-dx/web-features) package to the latest version.
-            
-            This PR was created by the [Update Web Features](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-web-features.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository.
+          title: "Update web-features from v${{ steps.current-version.outputs.version }} to v${{ steps.new-version.outputs.version }}"
+          body: ${{ steps.pr-body.outputs.body }}
           branch: "update-web-features"
           labels: automated

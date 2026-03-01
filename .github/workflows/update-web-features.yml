@@ -77,12 +77,18 @@ jobs:
             echo "## Release Notes"
             echo "*Sourced from [web-features's releases](https://github.com/$REPO/releases/tag/v$NEW_VERSION).*"
             echo ""
+            # Wrapped in a code fence to prevent @ mentions from notifying contributors
+            echo '```'
             echo "$RELEASE_NOTES"
+            echo '```'
             echo ""
             echo "## Commits"
             echo "*Sourced from [web-features's compare](https://github.com/$REPO/compare/v$OLD_VERSION...v$NEW_VERSION).*"
             echo ""
+            # Wrapped in a code fence to prevent @ mentions from notifying contributors
+            echo '```'
             echo "$COMMITS"
+            echo '```'
             echo ""
             echo "---"
             echo "This PR was created by the [Update Web Features](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-web-features.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."

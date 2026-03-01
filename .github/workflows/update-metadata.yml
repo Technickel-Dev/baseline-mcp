@@ -72,12 +72,18 @@ jobs:
             echo "## Release Notes"
             echo "*Sourced from [web-features-mappings's releases](${RELEASE_URL:-https://github.com/$REPO/releases}).*"
             echo ""
+            # Wrapped in a code fence to prevent @ mentions from notifying contributors
+            echo '```'
             echo "$RELEASE_NOTES"
+            echo '```'
             echo ""
             echo "## Recent Commits"
             echo "*Sourced from [web-features-mappings's commits](https://github.com/$REPO/commits/main/mappings/combined-data.json).*"
             echo ""
+            # Wrapped in a code fence to prevent @ mentions from notifying contributors
+            echo '```'
             echo "$COMMITS"
+            echo '```'
             echo ""
             echo "---"
             echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."

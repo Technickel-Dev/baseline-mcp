@@ -56,7 +56,9 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$REPO/releases/tags/v$NEW_VERSION" \
             | jq -r '.body // "No release notes available."' \
-            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
+            | sed -e 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g' \
+              -e 's|/pull/\([0-9]\)|/pull<!-- -->/\1|g' \
+              -e 's|/issues/\([0-9]\)|/issues<!-- -->/\1|g')
 
           # Escape @ mentions to prevent notifying contributors when reposting commit messages
           COMMITS=$(curl -s \
@@ -72,7 +74,9 @@ jobs:
                 "Unable to fetch commits."
               end' \
             | head -20 \
-            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
+            | sed -e 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g' \
+              -e 's|/pull/\([0-9]\)|/pull<!-- -->/\1|g' \
+              -e 's|/issues/\([0-9]\)|/issues<!-- -->/\1|g')
 
           {
             echo "body<<PREOF"

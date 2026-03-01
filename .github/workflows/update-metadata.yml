@@ -32,7 +32,9 @@ jobs:
           RELEASE_URL=$(echo "$RELEASE" | jq -r '.html_url // ""')
           # Escape @ mentions to prevent notifying contributors when reposting release content
           RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body // "No release notes available."' \
-            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
+            | sed -e 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g' \
+              -e 's|/pull/\([0-9]\)|/pull<!-- -->/\1|g' \
+              -e 's|/issues/\([0-9]\)|/issues<!-- -->/\1|g')
 
           # Escape @ mentions to prevent notifying contributors when reposting commit messages
           COMMITS=$(curl -s \
@@ -43,7 +45,9 @@ jobs:
               [.[] |
               "- [`" + (.sha[:7]) + "`](" + .html_url + ") " + (.commit.message | split("\n")[0]) + " (" + (.commit.author.date[:10]) + ")"]
               | join("\n")' \
-            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
+            | sed -e 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g' \
+              -e 's|/pull/\([0-9]\)|/pull<!-- -->/\1|g' \
+              -e 's|/issues/\([0-9]\)|/issues<!-- -->/\1|g')
 
           {
             echo "release_tag=$RELEASE_TAG"
@@ -84,7 +88,7 @@ jobs:
             echo "$COMMITS"
             echo ""
             echo "---"
-            echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository. @<!-- -->Technickel-Dev"
+            echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."
             echo "PREOF"
           } >> $GITHUB_OUTPUT
 

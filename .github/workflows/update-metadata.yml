@@ -30,8 +30,11 @@ jobs:
 
           RELEASE_TAG=$(echo "$RELEASE" | jq -r '.tag_name // ""')
           RELEASE_URL=$(echo "$RELEASE" | jq -r '.html_url // ""')
-          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body // "No release notes available."')
+          # Escape @ mentions to prevent notifying contributors when reposting release content
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body // "No release notes available."' \
+            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
 
+          # Escape @ mentions to prevent notifying contributors when reposting commit messages
           COMMITS=$(curl -s \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
@@ -39,7 +42,8 @@ jobs:
             | jq -r '
               [.[] |
               "- [`" + (.sha[:7]) + "`](" + .html_url + ") " + (.commit.message | split("\n")[0]) + " (" + (.commit.author.date[:10]) + ")"]
-              | join("\n")')
+              | join("\n")' \
+            | sed 's/@\([a-zA-Z0-9_-]\)/@<!-- -->\1/g')
 
           {
             echo "release_tag=$RELEASE_TAG"
@@ -72,21 +76,15 @@ jobs:
             echo "## Release Notes"
             echo "*Sourced from [web-features-mappings's releases](${RELEASE_URL:-https://github.com/$REPO/releases}).*"
             echo ""
-            # Wrapped in a code fence to prevent @ mentions from notifying contributors
-            echo '```'
             echo "$RELEASE_NOTES"
-            echo '```'
             echo ""
             echo "## Recent Commits"
             echo "*Sourced from [web-features-mappings's commits](https://github.com/$REPO/commits/main/mappings/combined-data.json).*"
             echo ""
-            # Wrapped in a code fence to prevent @ mentions from notifying contributors
-            echo '```'
             echo "$COMMITS"
-            echo '```'
             echo ""
             echo "---"
-            echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository."
+            echo "This PR was created by the [Update Web Feature Metadata](https://github.com/Technickel-Dev/baseline-mcp/actions/workflows/update-metadata.yml) workflow in the [baseline-mcp](https://github.com/Technickel-Dev/baseline-mcp) repository. @<!-- -->Technickel-Dev"
             echo "PREOF"
           } >> $GITHUB_OUTPUT
 
